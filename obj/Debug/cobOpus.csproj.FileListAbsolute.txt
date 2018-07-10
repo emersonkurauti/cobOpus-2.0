@@ -129,3 +129,4 @@ C:\emersonkurauti\cobOpus-2.0\obj\Debug\cobOpus.csproj.CopyComplete
 C:\emersonkurauti\cobOpus-2.0\obj\Debug\cobOpus.exe
 C:\emersonkurauti\cobOpus-2.0\obj\Debug\cobOpus.pdb
 C:\emersonkurauti\cobOpus-2.0\obj\Debug\cobOpus.View.frmCadComodos.resources
+C:\emersonkurauti\cobOpus-2.0\obj\Debug\cobOpus.csprojAssemblyReference.cache

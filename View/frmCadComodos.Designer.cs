@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadComodos));
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.cdComodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nmComodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,7 +94,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(511, 409);
             this.Controls.Add(this.dgvDados);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadComodos";
+            this.Text = "Cômodos";
             this.Load += new System.EventHandler(this.frmCadComodos_Load);
             this.Controls.SetChildIndex(this.dgvDados, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
@@ -108,9 +111,9 @@
 
         private System.Windows.Forms.DataGridView dgvDados;
         private cobDataBase_dbDataSet cobDataBase_dbDataSet;
-        private System.Windows.Forms.BindingSource cobComodosBindingSource;
         private cobDataBase_dbDataSetTableAdapters.cobComodosTableAdapter cobComodosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn cdComodoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nmComodoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource cobComodosBindingSource;
     }
 }
