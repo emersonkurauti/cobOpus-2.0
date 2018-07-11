@@ -149,3 +149,5 @@ obj/Debug/cobOpus.Properties.Resources.resources
 obj/Debug/cobOpus.View.frmCadGridBase.resources
 obj/Debug/cobOpus.View.frmCadProdutos.resources
 obj/Debug/TempPE/cobDataBase_dbDataSet.Designer.cs.dll
+obj/Debug/cobOpus.frmMenu.resources
+obj/Debug/cobOpus.frmMenuBasico.resources

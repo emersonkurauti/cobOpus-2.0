@@ -88,11 +88,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,8 +119,14 @@
     <Compile Include="View\TelasBase\frmCadGridBase.Designer.cs">
       <DependentUpon>frmCadGridBase.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="View\TelasBase\frmMenuBasico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelasBase\frmMenuBasico.designer.cs">
+      <DependentUpon>frmMenuBasico.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\TelasBase\frmCadGridBase.resx">
       <DependentUpon>frmCadGridBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelasBase\frmMenuBasico.resx">
+      <DependentUpon>frmMenuBasico.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

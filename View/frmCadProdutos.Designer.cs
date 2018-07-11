@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cobProdutosTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobProdutosTableAdapter();
             this.dgvDados = new System.Windows.Forms.DataGridView();
@@ -54,7 +55,10 @@
             // dgvDados
             // 
             this.dgvDados.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dgvDados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDados.AutoGenerateColumns = false;
+            this.dgvDados.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cdProdutoDataGridViewTextBoxColumn,
@@ -66,6 +70,7 @@
             this.dgvDados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDados.Location = new System.Drawing.Point(0, 25);
             this.dgvDados.Name = "dgvDados";
+            this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(511, 384);
             this.dgvDados.TabIndex = 14;
             // 
@@ -121,7 +126,7 @@
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.DataPropertyName = "cdUnidadeMedida";
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.DataSource = this.cobUnidadeMedidaBindingSource;
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.DisplayMember = "deUnidadeMedida";
-            this.cdUnidadeMedidaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.cdUnidadeMedidaDataGridViewTextBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.HeaderText = "Und. Medida";
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.Name = "cdUnidadeMedidaDataGridViewTextBoxColumn";
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
