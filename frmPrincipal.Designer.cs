@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.obrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.obrasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiComodos = new System.Windows.Forms.ToolStripMenuItem();
-            this.atividadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.comodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atividadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiComodos = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obrasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,12 @@
             this.obrasToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.obrasToolStripMenuItem.Text = "Controle";
             // 
+            // obrasToolStripMenuItem2
+            // 
+            this.obrasToolStripMenuItem2.Name = "obrasToolStripMenuItem2";
+            this.obrasToolStripMenuItem2.Size = new System.Drawing.Size(105, 22);
+            this.obrasToolStripMenuItem2.Text = "Obras";
+            // 
             // comodosToolStripMenuItem
             // 
             this.comodosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -72,17 +78,11 @@
             this.comodosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.comodosToolStripMenuItem.Text = "Cadastros";
             // 
-            // obrasToolStripMenuItem1
+            // atividadasToolStripMenuItem
             // 
-            this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
-            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.obrasToolStripMenuItem1.Text = "Obras";
-            // 
-            // produtosToolStripMenuItem
-            // 
-            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.produtosToolStripMenuItem.Text = "Produtos";
+            this.atividadasToolStripMenuItem.Name = "atividadasToolStripMenuItem";
+            this.atividadasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.atividadasToolStripMenuItem.Text = "Atividadas";
             // 
             // tsmiComodos
             // 
@@ -91,17 +91,18 @@
             this.tsmiComodos.Text = "Cômodos";
             this.tsmiComodos.Click += new System.EventHandler(this.tsmiComodos_Click);
             // 
-            // atividadasToolStripMenuItem
+            // produtosToolStripMenuItem
             // 
-            this.atividadasToolStripMenuItem.Name = "atividadasToolStripMenuItem";
-            this.atividadasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.atividadasToolStripMenuItem.Text = "Atividadas";
+            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
-            // obrasToolStripMenuItem2
+            // obrasToolStripMenuItem1
             // 
-            this.obrasToolStripMenuItem2.Name = "obrasToolStripMenuItem2";
-            this.obrasToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.obrasToolStripMenuItem2.Text = "Obras";
+            this.obrasToolStripMenuItem1.Name = "obrasToolStripMenuItem1";
+            this.obrasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.obrasToolStripMenuItem1.Text = "Obras";
             // 
             // relatóriosToolStripMenuItem
             // 

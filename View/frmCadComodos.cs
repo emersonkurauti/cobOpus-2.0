@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace cobOpus.View
 {
-    public partial class frmCadComodos : cobOpus.View.TelasBase.frmCadGridBase
+    public partial class frmCadComodos : frmCadGridBase
     {
         public frmCadComodos()
         {

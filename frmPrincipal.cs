@@ -17,5 +17,12 @@ namespace cobOpus
             frmCadComodos.MdiParent = this;
             frmCadComodos.Show();
         }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadProdutos frmCadProdutos = new frmCadProdutos();
+            frmCadProdutos.MdiParent = this;
+            frmCadProdutos.Show();
+        }
     }
 }
