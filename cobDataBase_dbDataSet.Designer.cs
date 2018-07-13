@@ -50,8 +50,6 @@ namespace cobOpus {
         
         private cobProdutosDataTable tablecobProdutos;
         
-        private global::System.Data.DataRelation relationcobAtividades_cobProdutosSugeridos;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,7 +482,6 @@ namespace cobOpus {
                     this.tablecobProdutos.InitVars();
                 }
             }
-            this.relationcobAtividades_cobProdutosSugeridos = this.Relations["cobAtividades_cobProdutosSugeridos"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -529,20 +526,6 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobObraComodoAtiv_cobAtividades", new global::System.Data.DataColumn[] {
-                        this.tablecobObraComodoAtiv.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobAtividades.cdAtividadeColumn});
-            this.tablecobAtividades.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodoAtiv_cobAtividades", new global::System.Data.DataColumn[] {
-                        this.tablecobParcialComodoAtiv.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobAtividades.cdAtividadeColumn});
-            this.tablecobAtividades.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_cobObras_cobObraComodo", new global::System.Data.DataColumn[] {
                         this.tablecobObras.cdObraColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobObraComodo.cdObraColumn});
@@ -562,6 +545,13 @@ namespace cobOpus {
                         this.tablecobObraComodo.cdComodoColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobObraComodoAtiv.cdComodoColumn,
                         this.tablecobObraComodoAtiv.cdObraColumn});
+            this.tablecobObraComodoAtiv.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobObraComodoAtiv_cobAtividades", new global::System.Data.DataColumn[] {
+                        this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobObraComodoAtiv.cdAtividadeColumn});
             this.tablecobObraComodoAtiv.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -591,6 +581,13 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("cobAtividades_cobProdutosSugeridos", new global::System.Data.DataColumn[] {
+                        this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobProdutosSugeridos.cdAtividadeColumn});
+            this.tablecobProdutosSugeridos.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_cobProdutos_cobProdutosSugeridos", new global::System.Data.DataColumn[] {
                         this.tablecobProdutos.cdProdutoColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobProdutosSugeridos.cdProdutoColumn});
@@ -605,6 +602,13 @@ namespace cobOpus {
                         this.tablecobParcialComodoAtiv.cdAtividadeColumn,
                         this.tablecobParcialComodoAtiv.cdComodoColumn,
                         this.tablecobParcialComodoAtiv.cdParcialColumn});
+            this.tablecobParcialComodoAtiv.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodoAtiv_cobAtividades", new global::System.Data.DataColumn[] {
+                        this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobParcialComodoAtiv.cdAtividadeColumn});
             this.tablecobParcialComodoAtiv.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -632,10 +636,6 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            this.relationcobAtividades_cobProdutosSugeridos = new global::System.Data.DataRelation("cobAtividades_cobProdutosSugeridos", new global::System.Data.DataColumn[] {
-                        this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobProdutosSugeridos.cdAtividadeColumn}, false);
-            this.Relations.Add(this.relationcobAtividades_cobProdutosSugeridos);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3375,14 +3375,11 @@ namespace cobOpus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public cobProdutosSugeridosRow AddcobProdutosSugeridosRow(int cdProduto, cobAtividadesRow parentcobAtividadesRowBycobAtividades_cobProdutosSugeridos) {
+            public cobProdutosSugeridosRow AddcobProdutosSugeridosRow(int cdProduto, int cdAtividade) {
                 cobProdutosSugeridosRow rowcobProdutosSugeridosRow = ((cobProdutosSugeridosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cdProduto,
-                        null};
-                if ((parentcobAtividadesRowBycobAtividades_cobProdutosSugeridos != null)) {
-                    columnValuesArray[1] = parentcobAtividadesRowBycobAtividades_cobProdutosSugeridos[0];
-                }
+                        cdAtividade};
                 rowcobProdutosSugeridosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcobProdutosSugeridosRow);
                 return rowcobProdutosSugeridosRow;
@@ -5137,17 +5134,6 @@ namespace cobOpus {
             public void SetvlAtividadeNull() {
                 this[this.tablecobAtividades.vlAtividadeColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public cobProdutosSugeridosRow[] GetcobProdutosSugeridosRows() {
-                if ((this.Table.ChildRelations["cobAtividades_cobProdutosSugeridos"] == null)) {
-                    return new cobProdutosSugeridosRow[0];
-                }
-                else {
-                    return ((cobProdutosSugeridosRow[])(base.GetChildRows(this.Table.ChildRelations["cobAtividades_cobProdutosSugeridos"])));
-                }
-            }
         }
         
         /// <summary>
@@ -5582,17 +5568,6 @@ namespace cobOpus {
                 }
                 set {
                     this[this.tablecobProdutosSugeridos.cdAtividadeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public cobAtividadesRow cobAtividadesRow {
-                get {
-                    return ((cobAtividadesRow)(this.GetParentRow(this.Table.ParentRelations["cobAtividades_cobProdutosSugeridos"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["cobAtividades_cobProdutosSugeridos"]);
                 }
             }
         }
@@ -11681,6 +11656,15 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._cobAtividadesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.cobAtividades.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cobAtividadesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._cobParcialComodoAtivProdTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.cobParcialComodoAtivProd.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -11753,15 +11737,6 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cobAtividadesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.cobAtividades.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cobAtividadesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._cobUnidadeMedidaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.cobUnidadeMedida.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -11804,6 +11779,14 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._cobProdutosTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cobAtividadesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.cobAtividades.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cobAtividadesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -11871,14 +11854,6 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cobAtividadesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.cobAtividades.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cobAtividadesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._cobUnidadeMedidaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.cobUnidadeMedida.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -11934,14 +11909,6 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cobUnidadeMedidaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cobAtividadesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.cobAtividades.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cobAtividadesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -12006,6 +11973,14 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cobParcialComodoAtivProdTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cobAtividadesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.cobAtividades.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cobAtividadesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

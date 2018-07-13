@@ -32,5 +32,38 @@ namespace cobOpus.View
         {
             bindingNavigatorAddNewItem.Enabled = true;
         }
+
+        private void RetornarMascara(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            txt.Text = double.Parse(txt.Text).ToString("C2");
+        }
+
+        private void TirarMascara(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            txt.Text = txt.Text.Replace("R$", "").Trim();
+        }
+
+        private void ApenasValorNumerico(object sender, KeyPressEventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Back))
+            {
+                if (e.KeyChar == ',')
+                {
+                    e.Handled = (txt.Text.Contains(","));
+                }
+                else
+                    e.Handled = true;
+            }
+        }
+
+        protected void AplicarEventosMascaraMoeda(TextBox txt)
+        {
+            txt.Enter += TirarMascara;
+            txt.Leave += RetornarMascara;
+            txt.KeyPress += ApenasValorNumerico;
+        }
     }
 }

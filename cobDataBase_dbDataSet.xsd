@@ -1124,6 +1124,14 @@
       <xs:field xpath="mstns:cdComodo" />
       <xs:field xpath="mstns:cdParcial" />
     </xs:keyref>
+    <xs:keyref name="FK_cobParcialComodoAtiv_cobAtividades" refer="cobAtividades_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:cobParcialComodoAtiv" />
+      <xs:field xpath="mstns:cdAtividade" />
+    </xs:keyref>
+    <xs:keyref name="cobAtividades_cobProdutosSugeridos" refer="cobAtividades_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:cobProdutosSugeridos" />
+      <xs:field xpath="mstns:cdAtividade" />
+    </xs:keyref>
     <xs:keyref name="FK_cobProdutos_cobProdutosSugeridos" refer="cobProdutos_Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobProdutosSugeridos" />
       <xs:field xpath="mstns:cdProduto" />
@@ -1147,6 +1155,10 @@
       <xs:field xpath="mstns:cdComodo" />
       <xs:field xpath="mstns:cdObra" />
     </xs:keyref>
+    <xs:keyref name="FK_cobObraComodoAtiv_cobAtividades" refer="cobAtividades_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:cobObraComodoAtiv" />
+      <xs:field xpath="mstns:cdAtividade" />
+    </xs:keyref>
     <xs:keyref name="FK_cobObras_cobObraComodo" refer="cobObras_Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobObraComodo" />
       <xs:field xpath="mstns:cdObra" />
@@ -1155,22 +1167,9 @@
       <xs:selector xpath=".//mstns:cobObraComodo" />
       <xs:field xpath="mstns:cdComodo" />
     </xs:keyref>
-    <xs:keyref name="FK_cobObraComodoAtiv_cobAtividades" refer="Constraint2" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:cobAtividades" />
-      <xs:field xpath="mstns:cdAtividade" />
-    </xs:keyref>
-    <xs:keyref name="FK_cobParcialComodoAtiv_cobAtividades" refer="Constraint3" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:cobAtividades" />
-      <xs:field xpath="mstns:cdAtividade" />
-    </xs:keyref>
     <xs:keyref name="FK_cobParcialObra_cobObras" refer="cobParcialObra_Constraint2" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobObras" />
       <xs:field xpath="mstns:cdObra" />
     </xs:keyref>
   </xs:element>
-  <xs:annotation>
-    <xs:appinfo>
-      <msdata:Relationship name="cobAtividades_cobProdutosSugeridos" msdata:parent="cobAtividades" msdata:child="cobProdutosSugeridos" msdata:parentkey="cdAtividade" msdata:childkey="cdAtividade" msprop:Generator_UserChildTable="cobProdutosSugeridos" msprop:Generator_ChildPropName="GetcobProdutosSugeridosRows" msprop:Generator_UserRelationName="cobAtividades_cobProdutosSugeridos" msprop:Generator_RelationVarName="relationcobAtividades_cobProdutosSugeridos" msprop:Generator_UserParentTable="cobAtividades" msprop:Generator_ParentPropName="cobAtividadesRow" />
-    </xs:appinfo>
-  </xs:annotation>
 </xs:schema>

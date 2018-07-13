@@ -101,6 +101,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cobDataBase_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="View\frmCadAtividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadAtividades.Designer.cs">
+      <DependentUpon>frmCadAtividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmCadComodos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmCadAtividades.resx">
+      <DependentUpon>frmCadAtividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadComodos.resx">
       <DependentUpon>frmCadComodos.cs</DependentUpon>
     </EmbeddedResource>

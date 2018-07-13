@@ -51,11 +51,13 @@ namespace cobOpus
         {
             AddListTela("cobOpus.View.frmCadComodos");
             AddListTela("cobOpus.View.frmCadProdutos");
+            AddListTela("cobOpus.View.frmCadAtividades");
 
             ToolStripMenuItem menuCadastros = RetornarItemMenuCriado(menuStrip, "&Cadastros", null, null, "btnCadastros");
+            CriarSubItemMenu(menuCadastros, "&Atividades...", null, ItemMenu_onClick, "cobOpus.View.frmCadAtividades");
             CriarSubItemMenu(menuCadastros, "&Cômodos...", null, ItemMenu_onClick, "cobOpus.View.frmCadComodos");
             CriarSubItemMenu(menuCadastros, "&Produtos...", null, ItemMenu_onClick, "cobOpus.View.frmCadProdutos");
-
+            
             AddItemMenu(menuStrip, "&Sair", null, btnSair_onClick, "btnSair");
         }
 
