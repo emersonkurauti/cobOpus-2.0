@@ -46,6 +46,8 @@
             this.tsbRestaurar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbSalvar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tslMensagem = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.cobDataBase_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnControle)).BeginInit();
             this.bnControle.SuspendLayout();
@@ -75,7 +77,9 @@
             this.bindingNavigatorDeleteItem,
             this.bindingNavigatorAddNewItem,
             this.toolStripSeparator1,
-            this.tsbSalvar});
+            this.tsbSalvar,
+            this.toolStripSeparator2,
+            this.tslMensagem});
             this.bnControle.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.bnControle.Location = new System.Drawing.Point(0, 0);
             this.bnControle.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -95,6 +99,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -197,6 +202,17 @@
             this.tsbSalvar.Text = "Salvar";
             this.tsbSalvar.Click += new System.EventHandler(this.tsbSalvar_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tslMensagem
+            // 
+            this.tslMensagem.Name = "tslMensagem";
+            this.tslMensagem.Size = new System.Drawing.Size(0, 22);
+            this.tslMensagem.Visible = false;
+            // 
             // frmCadGridBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +248,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         protected System.Windows.Forms.ToolStripButton tsbSalvar;
         public System.Windows.Forms.BindingNavigator bnControle;
+        public System.Windows.Forms.ToolStripLabel tslMensagem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

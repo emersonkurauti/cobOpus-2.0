@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cobProdutosTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobProdutosTableAdapter();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.cobUnidadeMedidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cobDataBase_dbDataSet = new cobOpus.cobDataBase_dbDataSet();
-            this.cobProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cobUnidadeMedidaTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobUnidadeMedidaTableAdapter();
             this.cdProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nmProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deFormulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vlProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cdUnidadeMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.cobUnidadeMedidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cobDataBase_dbDataSet = new cobOpus.cobDataBase_dbDataSet();
+            this.cobProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cobUnidadeMedidaTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobUnidadeMedidaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cobUnidadeMedidaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cobDataBase_dbDataSet)).BeginInit();
@@ -73,25 +73,8 @@
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(511, 384);
             this.dgvDados.TabIndex = 14;
-            // 
-            // cobUnidadeMedidaBindingSource
-            // 
-            this.cobUnidadeMedidaBindingSource.DataMember = "cobUnidadeMedida";
-            this.cobUnidadeMedidaBindingSource.DataSource = this.cobDataBase_dbDataSet;
-            // 
-            // cobDataBase_dbDataSet
-            // 
-            this.cobDataBase_dbDataSet.DataSetName = "cobDataBase_dbDataSet";
-            this.cobDataBase_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cobProdutosBindingSource
-            // 
-            this.cobProdutosBindingSource.DataMember = "cobProdutos";
-            this.cobProdutosBindingSource.DataSource = this.cobDataBase_dbDataSet;
-            // 
-            // cobUnidadeMedidaTableAdapter
-            // 
-            this.cobUnidadeMedidaTableAdapter.ClearBeforeFill = true;
+            this.dgvDados.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellEndEdit);
+            this.dgvDados.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvDados_CellValidating);
             // 
             // cdProdutoDataGridViewTextBoxColumn
             // 
@@ -133,6 +116,25 @@
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.ValueMember = "cdUnidadeMedida";
             this.cdUnidadeMedidaDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // cobUnidadeMedidaBindingSource
+            // 
+            this.cobUnidadeMedidaBindingSource.DataMember = "cobUnidadeMedida";
+            this.cobUnidadeMedidaBindingSource.DataSource = this.cobDataBase_dbDataSet;
+            // 
+            // cobDataBase_dbDataSet
+            // 
+            this.cobDataBase_dbDataSet.DataSetName = "cobDataBase_dbDataSet";
+            this.cobDataBase_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cobProdutosBindingSource
+            // 
+            this.cobProdutosBindingSource.DataMember = "cobProdutos";
+            this.cobProdutosBindingSource.DataSource = this.cobDataBase_dbDataSet;
+            // 
+            // cobUnidadeMedidaTableAdapter
+            // 
+            this.cobUnidadeMedidaTableAdapter.ClearBeforeFill = true;
             // 
             // frmCadProdutos
             // 

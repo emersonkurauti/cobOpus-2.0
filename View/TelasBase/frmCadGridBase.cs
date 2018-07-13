@@ -5,9 +5,12 @@ namespace cobOpus.View
 {
     public partial class frmCadGridBase : Form
     {
+        protected bool bRegistroValido;
+
         public frmCadGridBase()
         {
             InitializeComponent();
+            bRegistroValido = true;
         }
 
         protected virtual void tsbSalvar_Click(object sender, EventArgs e)
