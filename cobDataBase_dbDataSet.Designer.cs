@@ -50,6 +50,8 @@ namespace cobOpus {
         
         private cobProdutosDataTable tablecobProdutos;
         
+        private global::System.Data.DataRelation relationcobAtividades_cobProdutosSugeridos;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -482,6 +484,7 @@ namespace cobOpus {
                     this.tablecobProdutos.InitVars();
                 }
             }
+            this.relationcobAtividades_cobProdutosSugeridos = this.Relations["cobAtividades_cobProdutosSugeridos"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -636,6 +639,10 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationcobAtividades_cobProdutosSugeridos = new global::System.Data.DataRelation("cobAtividades_cobProdutosSugeridos", new global::System.Data.DataColumn[] {
+                        this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobProdutosSugeridos.cdAtividadeColumn}, false);
+            this.Relations.Add(this.relationcobAtividades_cobProdutosSugeridos);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1859,8 +1866,6 @@ namespace cobOpus {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncdAtividade}, true));
                 this.columncdAtividade.AutoIncrement = true;
-                this.columncdAtividade.AutoIncrementSeed = -1;
-                this.columncdAtividade.AutoIncrementStep = -1;
                 this.columncdAtividade.AllowDBNull = false;
                 this.columncdAtividade.Unique = true;
                 this.columndeResumoAtividades.AllowDBNull = false;
@@ -3375,11 +3380,14 @@ namespace cobOpus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public cobProdutosSugeridosRow AddcobProdutosSugeridosRow(int cdProduto, int cdAtividade) {
+            public cobProdutosSugeridosRow AddcobProdutosSugeridosRow(int cdProduto, cobAtividadesRow parentcobAtividadesRowBycobAtividades_cobProdutosSugeridos) {
                 cobProdutosSugeridosRow rowcobProdutosSugeridosRow = ((cobProdutosSugeridosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cdProduto,
-                        cdAtividade};
+                        null};
+                if ((parentcobAtividadesRowBycobAtividades_cobProdutosSugeridos != null)) {
+                    columnValuesArray[1] = parentcobAtividadesRowBycobAtividades_cobProdutosSugeridos[0];
+                }
                 rowcobProdutosSugeridosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcobProdutosSugeridosRow);
                 return rowcobProdutosSugeridosRow;
@@ -3424,10 +3432,7 @@ namespace cobOpus {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncdProduto,
                                 this.columncdAtividade}, true));
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
-                                this.columncdProduto}, false));
                 this.columncdProduto.AllowDBNull = false;
-                this.columncdProduto.Unique = true;
                 this.columncdAtividade.AllowDBNull = false;
             }
             
@@ -5134,6 +5139,17 @@ namespace cobOpus {
             public void SetvlAtividadeNull() {
                 this[this.tablecobAtividades.vlAtividadeColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public cobProdutosSugeridosRow[] GetcobProdutosSugeridosRows() {
+                if ((this.Table.ChildRelations["cobAtividades_cobProdutosSugeridos"] == null)) {
+                    return new cobProdutosSugeridosRow[0];
+                }
+                else {
+                    return ((cobProdutosSugeridosRow[])(base.GetChildRows(this.Table.ChildRelations["cobAtividades_cobProdutosSugeridos"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5568,6 +5584,17 @@ namespace cobOpus {
                 }
                 set {
                     this[this.tablecobProdutosSugeridos.cdAtividadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public cobAtividadesRow cobAtividadesRow {
+                get {
+                    return ((cobAtividadesRow)(this.GetParentRow(this.Table.ParentRelations["cobAtividades_cobProdutosSugeridos"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["cobAtividades_cobProdutosSugeridos"]);
                 }
             }
         }
@@ -7741,8 +7768,13 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_cdAtividade, string Original_deResumoAtividades, string Original_deAtividadeDetalhado, global::System.Nullable<double> Original_vlAtividade) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_cdAtividade));
+        public virtual int Delete(global::System.Nullable<int> Original_cdAtividade, string Original_deResumoAtividades, string Original_deAtividadeDetalhado, global::System.Nullable<double> Original_vlAtividade) {
+            if ((Original_cdAtividade.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_cdAtividade.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Original_deResumoAtividades == null)) {
                 throw new global::System.ArgumentNullException("Original_deResumoAtividades");
             }
@@ -7822,7 +7854,7 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string deResumoAtividades, string deAtividadeDetalhado, global::System.Nullable<double> vlAtividade, int Original_cdAtividade, string Original_deResumoAtividades, string Original_deAtividadeDetalhado, global::System.Nullable<double> Original_vlAtividade) {
+        public virtual int Update(string deResumoAtividades, string deAtividadeDetalhado, global::System.Nullable<double> vlAtividade, global::System.Nullable<int> Original_cdAtividade, string Original_deResumoAtividades, string Original_deAtividadeDetalhado, global::System.Nullable<double> Original_vlAtividade) {
             if ((deResumoAtividades == null)) {
                 throw new global::System.ArgumentNullException("deResumoAtividades");
             }
@@ -7841,7 +7873,12 @@ namespace cobOpus.cobDataBase_dbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_cdAtividade));
+            if ((Original_cdAtividade.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_cdAtividade.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             if ((Original_deResumoAtividades == null)) {
                 throw new global::System.ArgumentNullException("Original_deResumoAtividades");
             }

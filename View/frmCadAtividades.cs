@@ -22,10 +22,7 @@ namespace cobOpus.View
             txtDeDetalheAtividade.DataBindings.Add("Text", cobAtividadesBindingSource, "deAtividadeDetalhado", true);
             txtVlAtividade.DataBindings.Add("Text", cobAtividadesBindingSource, "vlAtividade", true);
 
-            DataRelation drProdutosSugeridos = new DataRelation("ProdutosSugeridosAtividade",
-                    cobDataBase_dbDataSet.cobAtividades.Columns["cdAtividade"],
-                    cobDataBase_dbDataSet.cobProdutosSugeridos.Columns["cdAtividade"]);
-            cobDataBase_dbDataSet.Relations.Add(drProdutosSugeridos);
+            dgvProdutosSugeridos.Columns["cdAtividade"].Visible = false;
         }
 
         protected override void tsbSalvar_Click(object sender, EventArgs e)
@@ -35,14 +32,21 @@ namespace cobOpus.View
             {
                 return;
             }
+
             cobAtividadesBindingSource.EndEdit();
+            cobProdutosSugeridosBindingSource.EndEdit();
+
             cobAtividadesTableAdapter.Adapter.Update(cobDataBase_dbDataSet);
+            cobProdutosSugeridosTableAdapter.Adapter.Update(cobDataBase_dbDataSet);
+
             tsbRestaurar_Click(null, null);
         }
 
         protected override void tsbRestaurar_Click(object sender, EventArgs e)
         {
+            this.cobProdutosSugeridosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobProdutosSugeridos);
             this.cobAtividadesTableAdapter.Fill(this.cobDataBase_dbDataSet.cobAtividades);
+            this.cobProdutosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobProdutos);
             base.tsbRestaurar_Click(sender, e);
         }
     }

@@ -23,7 +23,7 @@ namespace cobOpus.View
             bindingNavigatorAddNewItem.Enabled = true;
         }
 
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        protected virtual void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             bindingNavigatorAddNewItem.Enabled = false;
         }
