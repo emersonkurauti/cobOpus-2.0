@@ -44,10 +44,20 @@ namespace cobOpus.View
 
         protected override void tsbRestaurar_Click(object sender, EventArgs e)
         {
-            this.cobProdutosSugeridosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobProdutosSugeridos);
+            this.cobDataBase_dbDataSet.cobProdutosSugeridos.Clear();
+            this.cobDataBase_dbDataSet.cobProdutos.Clear();
+            this.cobDataBase_dbDataSet.cobAtividades.Clear();
+
             this.cobAtividadesTableAdapter.Fill(this.cobDataBase_dbDataSet.cobAtividades);
             this.cobProdutosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobProdutos);
+            this.cobProdutosSugeridosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobProdutosSugeridos);
             base.tsbRestaurar_Click(sender, e);
+        }
+
+        protected override void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            base.bindingNavigatorAddNewItem_Click(sender, e);
+            tcCadastro.SelectedTab = tpFormulario;
         }
     }
 }
