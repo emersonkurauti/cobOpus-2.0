@@ -119,6 +119,12 @@
     <Compile Include="View\frmCadProdutos.Designer.cs">
       <DependentUpon>frmCadProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmCadUnidadeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadUnidadeMedida.Designer.cs">
+      <DependentUpon>frmCadUnidadeMedida.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TelasBase\frmCadGridBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadProdutos.resx">
       <DependentUpon>frmCadProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCadUnidadeMedida.resx">
+      <DependentUpon>frmCadUnidadeMedida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TelasBase\frmCadGridBase.resx">
       <DependentUpon>frmCadGridBase.cs</DependentUpon>
