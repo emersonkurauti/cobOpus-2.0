@@ -80,8 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tcCadastro;
-        private System.Windows.Forms.TabPage tpTabela;
-        private System.Windows.Forms.TabPage tpFormulario;
+        public System.Windows.Forms.TabControl tcCadastro;
+        public System.Windows.Forms.TabPage tpTabela;
+        public System.Windows.Forms.TabPage tpFormulario;
     }
 }

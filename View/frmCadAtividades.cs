@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Data;
 
 namespace cobOpus.View
 {
-    public partial class frmCadAtividades : cobOpus.View.frmCadGridBase
+    public partial class frmCadAtividades : frmCadGridBase
     {
         public frmCadAtividades()
         {

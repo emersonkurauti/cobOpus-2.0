@@ -113,6 +113,12 @@
     <Compile Include="View\frmCadComodos.Designer.cs">
       <DependentUpon>frmCadComodos.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmCadObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadObras.Designer.cs">
+      <DependentUpon>frmCadObras.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmCadProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadComodos.resx">
       <DependentUpon>frmCadComodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCadObras.resx">
+      <DependentUpon>frmCadObras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadProdutos.resx">
       <DependentUpon>frmCadProdutos.cs</DependentUpon>
