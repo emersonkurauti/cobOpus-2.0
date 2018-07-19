@@ -125,6 +125,12 @@
     <Compile Include="View\frmCadUnidadeMedida.Designer.cs">
       <DependentUpon>frmCadUnidadeMedida.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TelasBase\frmCadFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelasBase\frmCadFormBase.Designer.cs">
+      <DependentUpon>frmCadFormBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TelasBase\frmCadGridBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadUnidadeMedida.resx">
       <DependentUpon>frmCadUnidadeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelasBase\frmCadFormBase.resx">
+      <DependentUpon>frmCadFormBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TelasBase\frmCadGridBase.resx">
       <DependentUpon>frmCadGridBase.cs</DependentUpon>
