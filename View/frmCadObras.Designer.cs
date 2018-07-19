@@ -30,12 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.cdObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nmObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deEnderecoObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nmClienteObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cobObrasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cobDataBase_dbDataSet = new cobOpus.cobDataBase_dbDataSet();
             this.cobObrasTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobObrasTableAdapter();
@@ -47,6 +43,12 @@
             this.txtDeObra = new System.Windows.Forms.TextBox();
             this.txtDeEndereco = new System.Windows.Forms.TextBox();
             this.txtNmCliente = new System.Windows.Forms.TextBox();
+            this.cdObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nmObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deEnderecoObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nmClienteObraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnControle = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tcCadastro.SuspendLayout();
             this.tpTabela.SuspendLayout();
             this.tpFormulario.SuspendLayout();
@@ -83,7 +85,8 @@
             this.nmObraDataGridViewTextBoxColumn,
             this.deObraDataGridViewTextBoxColumn,
             this.deEnderecoObraDataGridViewTextBoxColumn,
-            this.nmClienteObraDataGridViewTextBoxColumn});
+            this.nmClienteObraDataGridViewTextBoxColumn,
+            this.btnControle});
             this.dgvDados.DataSource = this.cobObrasBindingSource;
             this.dgvDados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDados.Location = new System.Drawing.Point(3, 3);
@@ -92,46 +95,7 @@
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(497, 352);
             this.dgvDados.TabIndex = 16;
-            // 
-            // cdObraDataGridViewTextBoxColumn
-            // 
-            this.cdObraDataGridViewTextBoxColumn.DataPropertyName = "cdObra";
-            this.cdObraDataGridViewTextBoxColumn.HeaderText = "cdObra";
-            this.cdObraDataGridViewTextBoxColumn.Name = "cdObraDataGridViewTextBoxColumn";
-            this.cdObraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cdObraDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nmObraDataGridViewTextBoxColumn
-            // 
-            this.nmObraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nmObraDataGridViewTextBoxColumn.DataPropertyName = "nmObra";
-            this.nmObraDataGridViewTextBoxColumn.HeaderText = "Obra";
-            this.nmObraDataGridViewTextBoxColumn.Name = "nmObraDataGridViewTextBoxColumn";
-            this.nmObraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deObraDataGridViewTextBoxColumn
-            // 
-            this.deObraDataGridViewTextBoxColumn.DataPropertyName = "deObra";
-            this.deObraDataGridViewTextBoxColumn.HeaderText = "deObra";
-            this.deObraDataGridViewTextBoxColumn.Name = "deObraDataGridViewTextBoxColumn";
-            this.deObraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deObraDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // deEnderecoObraDataGridViewTextBoxColumn
-            // 
-            this.deEnderecoObraDataGridViewTextBoxColumn.DataPropertyName = "deEnderecoObra";
-            this.deEnderecoObraDataGridViewTextBoxColumn.HeaderText = "deEnderecoObra";
-            this.deEnderecoObraDataGridViewTextBoxColumn.Name = "deEnderecoObraDataGridViewTextBoxColumn";
-            this.deEnderecoObraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deEnderecoObraDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nmClienteObraDataGridViewTextBoxColumn
-            // 
-            this.nmClienteObraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nmClienteObraDataGridViewTextBoxColumn.DataPropertyName = "nmClienteObra";
-            this.nmClienteObraDataGridViewTextBoxColumn.HeaderText = "Cliente";
-            this.nmClienteObraDataGridViewTextBoxColumn.Name = "nmClienteObraDataGridViewTextBoxColumn";
-            this.nmClienteObraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellClick);
             // 
             // cobObrasBindingSource
             // 
@@ -220,6 +184,64 @@
             this.txtNmCliente.Size = new System.Drawing.Size(489, 20);
             this.txtNmCliente.TabIndex = 7;
             // 
+            // cdObraDataGridViewTextBoxColumn
+            // 
+            this.cdObraDataGridViewTextBoxColumn.DataPropertyName = "cdObra";
+            this.cdObraDataGridViewTextBoxColumn.HeaderText = "cdObra";
+            this.cdObraDataGridViewTextBoxColumn.Name = "cdObraDataGridViewTextBoxColumn";
+            this.cdObraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cdObraDataGridViewTextBoxColumn.Visible = false;
+            this.cdObraDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nmObraDataGridViewTextBoxColumn
+            // 
+            this.nmObraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nmObraDataGridViewTextBoxColumn.DataPropertyName = "nmObra";
+            this.nmObraDataGridViewTextBoxColumn.HeaderText = "Obra";
+            this.nmObraDataGridViewTextBoxColumn.Name = "nmObraDataGridViewTextBoxColumn";
+            this.nmObraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deObraDataGridViewTextBoxColumn
+            // 
+            this.deObraDataGridViewTextBoxColumn.DataPropertyName = "deObra";
+            this.deObraDataGridViewTextBoxColumn.HeaderText = "deObra";
+            this.deObraDataGridViewTextBoxColumn.Name = "deObraDataGridViewTextBoxColumn";
+            this.deObraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deObraDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // deEnderecoObraDataGridViewTextBoxColumn
+            // 
+            this.deEnderecoObraDataGridViewTextBoxColumn.DataPropertyName = "deEnderecoObra";
+            this.deEnderecoObraDataGridViewTextBoxColumn.HeaderText = "deEnderecoObra";
+            this.deEnderecoObraDataGridViewTextBoxColumn.Name = "deEnderecoObraDataGridViewTextBoxColumn";
+            this.deEnderecoObraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deEnderecoObraDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nmClienteObraDataGridViewTextBoxColumn
+            // 
+            this.nmClienteObraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nmClienteObraDataGridViewTextBoxColumn.DataPropertyName = "nmClienteObra";
+            this.nmClienteObraDataGridViewTextBoxColumn.HeaderText = "Cliente";
+            this.nmClienteObraDataGridViewTextBoxColumn.Name = "nmClienteObraDataGridViewTextBoxColumn";
+            this.nmClienteObraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // btnControle
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnControle.DefaultCellStyle = dataGridViewCellStyle2;
+            this.btnControle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControle.HeaderText = "";
+            this.btnControle.Name = "btnControle";
+            this.btnControle.ReadOnly = true;
+            this.btnControle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.btnControle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnControle.Text = "Gerenciar";
+            this.btnControle.ToolTipText = "Gerenciar";
+            this.btnControle.UseColumnTextForButtonValue = true;
+            this.btnControle.Width = 75;
+            // 
             // frmCadObras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,11 +267,6 @@
         private cobDataBase_dbDataSet cobDataBase_dbDataSet;
         private System.Windows.Forms.BindingSource cobObrasBindingSource;
         private cobDataBase_dbDataSetTableAdapters.cobObrasTableAdapter cobObrasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdObraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nmObraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deObraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deEnderecoObraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nmClienteObraDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -258,5 +275,11 @@
         private System.Windows.Forms.TextBox txtDeEndereco;
         private System.Windows.Forms.TextBox txtDeObra;
         private System.Windows.Forms.TextBox txtNmObra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdObraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nmObraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deObraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deEnderecoObraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nmClienteObraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn btnControle;
     }
 }

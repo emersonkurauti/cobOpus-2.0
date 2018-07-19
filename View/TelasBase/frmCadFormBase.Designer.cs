@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFormBase));
             this.tcCadastro = new System.Windows.Forms.TabControl();
             this.tpTabela = new System.Windows.Forms.TabPage();
             this.tpFormulario = new System.Windows.Forms.TabPage();
@@ -70,6 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(511, 409);
             this.Controls.Add(this.tcCadastro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadFormBase";
             this.Controls.SetChildIndex(this.tcCadastro, 0);
             this.tcCadastro.ResumeLayout(false);

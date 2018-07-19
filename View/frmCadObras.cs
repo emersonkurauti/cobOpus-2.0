@@ -45,5 +45,15 @@ namespace cobOpus.View
             this.cobObrasTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObras);
             base.tsbRestaurar_Click(sender, e);
         }
+
+        private void dgvDados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int nCdObra = 0;
+            if (e.ColumnIndex == this.btnControle.Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow currentRow = this.dgvDados.Rows[e.RowIndex];
+                nCdObra = Convert.ToInt32(currentRow.Cells[0].Value);
+            }
+        }
     }
 }
