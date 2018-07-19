@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace cobOpus.View.TelasBase
+namespace cobOpus.View
 {
     public partial class frmCadFormBase : cobOpus.View.frmCadGridBase
     {

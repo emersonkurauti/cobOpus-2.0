@@ -1,4 +1,4 @@
-﻿namespace cobOpus.View.TelasBase
+﻿namespace cobOpus.View
 {
     partial class frmCadFormBase
     {
