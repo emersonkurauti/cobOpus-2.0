@@ -54,6 +54,7 @@ namespace cobOpus
             AddListTela("cobOpus.View.frmCadAtividades");
             AddListTela("cobOpus.View.frmCadUnidadeMedida");
             AddListTela("cobOpus.View.frmCadObras");
+            AddListTela("cobOpus.View.frmControleObra");
 
             ToolStripMenuItem menuCadastros = RetornarItemMenuCriado(menuStrip, "&Cadastros", null, null, "btnCadastros");
             CriarSubItemMenu(menuCadastros, "&Atividades...", null, ItemMenu_onClick, "cobOpus.View.frmCadAtividades");
