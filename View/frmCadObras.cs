@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+using cobOpus;
 using System.Windows.Forms;
 
 namespace cobOpus.View
@@ -64,6 +60,9 @@ namespace cobOpus.View
             {
                 DataGridViewRow currentRow = this.dgvDados.Rows[e.RowIndex];
                 nCdObra = Convert.ToInt32(currentRow.Cells[0].Value);
+
+                ToolStripMenuItem tsmControle = new ToolStripMenuItem("Controle Obra", null, null, "cobOpus.View.frmControleObra");
+                ((frmMenu)this.Parent.Parent).ItemMenu_onClick(tsmControle, null);
             }
         }
     }

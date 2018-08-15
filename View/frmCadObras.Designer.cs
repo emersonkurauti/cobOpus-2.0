@@ -53,7 +53,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvObraComodo = new System.Windows.Forms.DataGridView();
+            this.cdComodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.cobComodosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nMetroLinearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nVolumeTetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nVolumePisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdObraDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKcobObrascobObraComodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bnObraComodo = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
@@ -70,12 +76,6 @@
             this.cobObraComodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cobComodosTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobComodosTableAdapter();
             this.cobObraComodoTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobObraComodoTableAdapter();
-            this.cdComodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.nAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nMetroLinearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nVolumeTetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nVolumePisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cdObraDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcCadastro.SuspendLayout();
             this.tpTabela.SuspendLayout();
             this.tpFormulario.SuspendLayout();
@@ -106,7 +106,6 @@
             // tpFormulario
             // 
             this.tpFormulario.Controls.Add(this.splitContainer1);
-            this.tpFormulario.Size = new System.Drawing.Size(637, 405);
             // 
             // dgvDados
             // 
@@ -227,26 +226,26 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvObraComodo);
             this.splitContainer1.Panel2.Controls.Add(this.bnObraComodo);
-            this.splitContainer1.Size = new System.Drawing.Size(631, 399);
-            this.splitContainer1.SplitterDistance = 205;
+            this.splitContainer1.Size = new System.Drawing.Size(497, 352);
+            this.splitContainer1.SplitterDistance = 180;
             this.splitContainer1.TabIndex = 0;
             // 
             // txtNmCliente
             // 
             this.txtNmCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNmCliente.Location = new System.Drawing.Point(8, 174);
+            this.txtNmCliente.Location = new System.Drawing.Point(8, 149);
             this.txtNmCliente.Name = "txtNmCliente";
-            this.txtNmCliente.Size = new System.Drawing.Size(618, 20);
+            this.txtNmCliente.Size = new System.Drawing.Size(484, 20);
             this.txtNmCliente.TabIndex = 15;
             // 
             // txtDeEndereco
             // 
             this.txtDeEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDeEndereco.Location = new System.Drawing.Point(8, 135);
+            this.txtDeEndereco.Location = new System.Drawing.Point(8, 110);
             this.txtDeEndereco.Name = "txtDeEndereco";
-            this.txtDeEndereco.Size = new System.Drawing.Size(618, 20);
+            this.txtDeEndereco.Size = new System.Drawing.Size(484, 20);
             this.txtDeEndereco.TabIndex = 14;
             // 
             // txtDeObra
@@ -257,7 +256,7 @@
             this.txtDeObra.Location = new System.Drawing.Point(8, 64);
             this.txtDeObra.Multiline = true;
             this.txtDeObra.Name = "txtDeObra";
-            this.txtDeObra.Size = new System.Drawing.Size(618, 52);
+            this.txtDeObra.Size = new System.Drawing.Size(484, 27);
             this.txtDeObra.TabIndex = 13;
             // 
             // txtNmObra
@@ -266,14 +265,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNmObra.Location = new System.Drawing.Point(8, 25);
             this.txtNmObra.Name = "txtNmObra";
-            this.txtNmObra.Size = new System.Drawing.Size(618, 20);
+            this.txtNmObra.Size = new System.Drawing.Size(484, 20);
             this.txtNmObra.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 158);
+            this.label4.Location = new System.Drawing.Point(5, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 11;
@@ -283,7 +282,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 119);
+            this.label3.Location = new System.Drawing.Point(5, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 10;
@@ -326,13 +325,61 @@
             this.dgvObraComodo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvObraComodo.Location = new System.Drawing.Point(0, 25);
             this.dgvObraComodo.Name = "dgvObraComodo";
-            this.dgvObraComodo.Size = new System.Drawing.Size(631, 165);
+            this.dgvObraComodo.Size = new System.Drawing.Size(497, 143);
             this.dgvObraComodo.TabIndex = 23;
+            // 
+            // cdComodoDataGridViewTextBoxColumn
+            // 
+            this.cdComodoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cdComodoDataGridViewTextBoxColumn.DataPropertyName = "cdComodo";
+            this.cdComodoDataGridViewTextBoxColumn.DataSource = this.cobComodosBindingSource;
+            this.cdComodoDataGridViewTextBoxColumn.DisplayMember = "nmComodo";
+            this.cdComodoDataGridViewTextBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cdComodoDataGridViewTextBoxColumn.HeaderText = "Cômodo";
+            this.cdComodoDataGridViewTextBoxColumn.Name = "cdComodoDataGridViewTextBoxColumn";
+            this.cdComodoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cdComodoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cdComodoDataGridViewTextBoxColumn.ValueMember = "cdComodo";
             // 
             // cobComodosBindingSource
             // 
             this.cobComodosBindingSource.DataMember = "cobComodos";
             this.cobComodosBindingSource.DataSource = this.cobDataBase_dbDataSet;
+            // 
+            // nAreaDataGridViewTextBoxColumn
+            // 
+            this.nAreaDataGridViewTextBoxColumn.DataPropertyName = "nArea";
+            this.nAreaDataGridViewTextBoxColumn.HeaderText = "Área";
+            this.nAreaDataGridViewTextBoxColumn.Name = "nAreaDataGridViewTextBoxColumn";
+            this.nAreaDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // nMetroLinearDataGridViewTextBoxColumn
+            // 
+            this.nMetroLinearDataGridViewTextBoxColumn.DataPropertyName = "nMetroLinear";
+            this.nMetroLinearDataGridViewTextBoxColumn.HeaderText = "Metro Linear";
+            this.nMetroLinearDataGridViewTextBoxColumn.Name = "nMetroLinearDataGridViewTextBoxColumn";
+            this.nMetroLinearDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // nVolumeTetoDataGridViewTextBoxColumn
+            // 
+            this.nVolumeTetoDataGridViewTextBoxColumn.DataPropertyName = "nVolumeTeto";
+            this.nVolumeTetoDataGridViewTextBoxColumn.HeaderText = "Vol. Teto";
+            this.nVolumeTetoDataGridViewTextBoxColumn.Name = "nVolumeTetoDataGridViewTextBoxColumn";
+            this.nVolumeTetoDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // nVolumePisoDataGridViewTextBoxColumn
+            // 
+            this.nVolumePisoDataGridViewTextBoxColumn.DataPropertyName = "nVolumePiso";
+            this.nVolumePisoDataGridViewTextBoxColumn.HeaderText = "Vol. Piso";
+            this.nVolumePisoDataGridViewTextBoxColumn.Name = "nVolumePisoDataGridViewTextBoxColumn";
+            this.nVolumePisoDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // cdObraDataGridViewTextBoxColumn1
+            // 
+            this.cdObraDataGridViewTextBoxColumn1.DataPropertyName = "cdObra";
+            this.cdObraDataGridViewTextBoxColumn1.HeaderText = "cdObra";
+            this.cdObraDataGridViewTextBoxColumn1.Name = "cdObraDataGridViewTextBoxColumn1";
+            this.cdObraDataGridViewTextBoxColumn1.Visible = false;
             // 
             // fKcobObrascobObraComodoBindingSource
             // 
@@ -364,7 +411,7 @@
             this.bnObraComodo.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.bnObraComodo.Name = "bnObraComodo";
             this.bnObraComodo.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bnObraComodo.Size = new System.Drawing.Size(631, 25);
+            this.bnObraComodo.Size = new System.Drawing.Size(497, 25);
             this.bnObraComodo.TabIndex = 22;
             this.bnObraComodo.Text = "bindingNavigator1";
             // 
@@ -465,54 +512,6 @@
             // cobObraComodoTableAdapter
             // 
             this.cobObraComodoTableAdapter.ClearBeforeFill = true;
-            // 
-            // cdComodoDataGridViewTextBoxColumn
-            // 
-            this.cdComodoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cdComodoDataGridViewTextBoxColumn.DataPropertyName = "cdComodo";
-            this.cdComodoDataGridViewTextBoxColumn.DataSource = this.cobComodosBindingSource;
-            this.cdComodoDataGridViewTextBoxColumn.DisplayMember = "nmComodo";
-            this.cdComodoDataGridViewTextBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cdComodoDataGridViewTextBoxColumn.HeaderText = "Cômodo";
-            this.cdComodoDataGridViewTextBoxColumn.Name = "cdComodoDataGridViewTextBoxColumn";
-            this.cdComodoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cdComodoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.cdComodoDataGridViewTextBoxColumn.ValueMember = "cdComodo";
-            // 
-            // nAreaDataGridViewTextBoxColumn
-            // 
-            this.nAreaDataGridViewTextBoxColumn.DataPropertyName = "nArea";
-            this.nAreaDataGridViewTextBoxColumn.HeaderText = "Área";
-            this.nAreaDataGridViewTextBoxColumn.Name = "nAreaDataGridViewTextBoxColumn";
-            this.nAreaDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // nMetroLinearDataGridViewTextBoxColumn
-            // 
-            this.nMetroLinearDataGridViewTextBoxColumn.DataPropertyName = "nMetroLinear";
-            this.nMetroLinearDataGridViewTextBoxColumn.HeaderText = "Metro Linear";
-            this.nMetroLinearDataGridViewTextBoxColumn.Name = "nMetroLinearDataGridViewTextBoxColumn";
-            this.nMetroLinearDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // nVolumeTetoDataGridViewTextBoxColumn
-            // 
-            this.nVolumeTetoDataGridViewTextBoxColumn.DataPropertyName = "nVolumeTeto";
-            this.nVolumeTetoDataGridViewTextBoxColumn.HeaderText = "Vol. Teto";
-            this.nVolumeTetoDataGridViewTextBoxColumn.Name = "nVolumeTetoDataGridViewTextBoxColumn";
-            this.nVolumeTetoDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // nVolumePisoDataGridViewTextBoxColumn
-            // 
-            this.nVolumePisoDataGridViewTextBoxColumn.DataPropertyName = "nVolumePiso";
-            this.nVolumePisoDataGridViewTextBoxColumn.HeaderText = "Vol. Piso";
-            this.nVolumePisoDataGridViewTextBoxColumn.Name = "nVolumePisoDataGridViewTextBoxColumn";
-            this.nVolumePisoDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // cdObraDataGridViewTextBoxColumn1
-            // 
-            this.cdObraDataGridViewTextBoxColumn1.DataPropertyName = "cdObra";
-            this.cdObraDataGridViewTextBoxColumn1.HeaderText = "cdObra";
-            this.cdObraDataGridViewTextBoxColumn1.Name = "cdObraDataGridViewTextBoxColumn1";
-            this.cdObraDataGridViewTextBoxColumn1.Visible = false;
             // 
             // frmCadObras
             // 

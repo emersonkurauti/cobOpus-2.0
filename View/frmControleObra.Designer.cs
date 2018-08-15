@@ -40,7 +40,6 @@
             this.Name = "frmControleObra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Controle de obra";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
