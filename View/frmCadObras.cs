@@ -17,6 +17,8 @@ namespace cobOpus.View
 
         private void frmCadObras_Load(object sender, EventArgs e)
         {
+            this.cobComodosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobComodos);
+            this.cobObraComodoTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObraComodo);
             this.cobObrasTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObras);
             this.bnControle.BindingSource = cobObrasBindingSource;
 
@@ -24,6 +26,8 @@ namespace cobOpus.View
             txtDeObra.DataBindings.Add("Text", cobObrasBindingSource, "deObra", true);
             txtDeEndereco.DataBindings.Add("Text", cobObrasBindingSource, "deEnderecoObra", true);
             txtNmCliente.DataBindings.Add("Text", cobObrasBindingSource, "nmClienteObra", true);
+
+            dgvObraComodo.Columns["cdObra"].Visible = false;
         }
 
         protected override void tsbSalvar_Click(object sender, EventArgs e)
@@ -35,14 +39,23 @@ namespace cobOpus.View
             }
 
             cobObrasBindingSource.EndEdit();
+            cobObraComodoBindingSource.EndEdit();
+
             cobObrasTableAdapter.Adapter.Update(cobDataBase_dbDataSet);
+            cobObraComodoTableAdapter.Adapter.Update(cobDataBase_dbDataSet);
             
             tsbRestaurar_Click(null, null);
         }
 
         protected override void tsbRestaurar_Click(object sender, EventArgs e)
         {
+            this.cobDataBase_dbDataSet.cobObraComodo.Clear();
+            this.cobDataBase_dbDataSet.cobComodos.Clear();
+            this.cobDataBase_dbDataSet.cobObras.Clear();
+
             this.cobObrasTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObras);
+            this.cobComodosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobComodos);
+            this.cobObraComodoTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObraComodo);
             base.tsbRestaurar_Click(sender, e);
         }
 
