@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace cobOpus.View
 {
-    public partial class frmCadUnidadesMedida : cobOpus.View.frmCadGridBase
-    {
-        public frmCadUnidadesMedida()
-        {
-            InitializeComponent();
-        }
+	public partial class frmCadUnidadeMedida : cobOpus.View.frmCadGridBase
+	{
+		public frmCadUnidadeMedida()
+		{
+			InitializeComponent();
+		}
 
         private void frmCadUnidadeMedida_Load(object sender, EventArgs e)
         {

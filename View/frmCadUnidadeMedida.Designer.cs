@@ -1,41 +1,41 @@
 ﻿namespace cobOpus.View
 {
-    partial class frmCadUnidadesMedida
-    {
-        /// <summary>
-        /// Variável de designer necessária.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class frmCadUnidadeMedida
+	{
+	        /// <summary>
+	        /// Variável de designer necessária.
+	        /// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Limpar os recursos que estão sendo usados.
-        /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Limpar os recursos que estão sendo usados.
+		/// </summary>
+	        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if(disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Código gerado pelo Windows Form Designer
+		#region Código gerado pelo Windows Form Designer
 
-        /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary>
+		/// Método necessário para suporte ao Designer - não modifique 
+		/// o conteúdo deste método com o editor de código.
+		/// </summary>
+		private void InitializeComponent()
+		{
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.cdUnidadeMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deUnidadeMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cobUnidadeMedidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cobDataBase_dbDataSet = new cobOpus.cobDataBase_dbDataSet();
             this.cobUnidadeMedidaTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobUnidadeMedidaTableAdapter();
+            this.cdUnidadeMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deUnidadeMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cobUnidadeMedidaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cobDataBase_dbDataSet)).BeginInit();
@@ -56,24 +56,9 @@
             this.dgvDados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDados.Location = new System.Drawing.Point(0, 25);
             this.dgvDados.Name = "dgvDados";
-            this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(511, 384);
             this.dgvDados.TabIndex = 15;
             this.dgvDados.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvDados_CellValidating);
-            // 
-            // cdUnidadeMedidaDataGridViewTextBoxColumn
-            // 
-            this.cdUnidadeMedidaDataGridViewTextBoxColumn.DataPropertyName = "cdUnidadeMedida";
-            this.cdUnidadeMedidaDataGridViewTextBoxColumn.HeaderText = "cdUnidadeMedida";
-            this.cdUnidadeMedidaDataGridViewTextBoxColumn.Name = "cdUnidadeMedidaDataGridViewTextBoxColumn";
-            this.cdUnidadeMedidaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // deUnidadeMedidaDataGridViewTextBoxColumn
-            // 
-            this.deUnidadeMedidaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.deUnidadeMedidaDataGridViewTextBoxColumn.DataPropertyName = "deUnidadeMedida";
-            this.deUnidadeMedidaDataGridViewTextBoxColumn.HeaderText = "Unidade de medida";
-            this.deUnidadeMedidaDataGridViewTextBoxColumn.Name = "deUnidadeMedidaDataGridViewTextBoxColumn";
             // 
             // cobUnidadeMedidaBindingSource
             // 
@@ -89,13 +74,27 @@
             // 
             this.cobUnidadeMedidaTableAdapter.ClearBeforeFill = true;
             // 
-            // frmCadUnidadesMedida
+            // cdUnidadeMedidaDataGridViewTextBoxColumn
+            // 
+            this.cdUnidadeMedidaDataGridViewTextBoxColumn.DataPropertyName = "cdUnidadeMedida";
+            this.cdUnidadeMedidaDataGridViewTextBoxColumn.HeaderText = "cdUnidadeMedida";
+            this.cdUnidadeMedidaDataGridViewTextBoxColumn.Name = "cdUnidadeMedidaDataGridViewTextBoxColumn";
+            this.cdUnidadeMedidaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // deUnidadeMedidaDataGridViewTextBoxColumn
+            // 
+            this.deUnidadeMedidaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deUnidadeMedidaDataGridViewTextBoxColumn.DataPropertyName = "deUnidadeMedida";
+            this.deUnidadeMedidaDataGridViewTextBoxColumn.HeaderText = "Unidade de Medida";
+            this.deUnidadeMedidaDataGridViewTextBoxColumn.Name = "deUnidadeMedidaDataGridViewTextBoxColumn";
+            // 
+            // frmCadUnidadeMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(511, 409);
             this.Controls.Add(this.dgvDados);
-            this.Name = "frmCadUnidadesMedida";
-            this.Text = "Unidades de medida";
+            this.Name = "frmCadUnidadeMedida";
+            this.Text = "Unidade de Medida";
             this.Load += new System.EventHandler(this.frmCadUnidadeMedida_Load);
             this.Controls.SetChildIndex(this.dgvDados, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
@@ -104,7 +103,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
+		}
 
         #endregion
 
