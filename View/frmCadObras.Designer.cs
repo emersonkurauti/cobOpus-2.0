@@ -53,7 +53,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvObraComodo = new System.Windows.Forms.DataGridView();
-            this.cobObraComodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cobComodosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKcobObrascobObraComodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bnObraComodo = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
@@ -66,16 +67,15 @@
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.cobComodosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cobObraComodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cobComodosTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobComodosTableAdapter();
             this.cobObraComodoTableAdapter = new cobOpus.cobDataBase_dbDataSetTableAdapters.cobObraComodoTableAdapter();
-            this.fKcobObrascobObraComodoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cdObraDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cdComodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nMetroLinearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nVolumeTetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nVolumePisoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cdObraDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcCadastro.SuspendLayout();
             this.tpTabela.SuspendLayout();
             this.tpFormulario.SuspendLayout();
@@ -87,11 +87,11 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObraComodo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cobObraComodoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnObraComodo)).BeginInit();
-            this.bnObraComodo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cobComodosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKcobObrascobObraComodoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnObraComodo)).BeginInit();
+            this.bnObraComodo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cobObraComodoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tcCadastro
@@ -316,12 +316,12 @@
             this.dgvObraComodo.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dgvObraComodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvObraComodo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cdObraDataGridViewTextBoxColumn1,
             this.cdComodoDataGridViewTextBoxColumn,
             this.nAreaDataGridViewTextBoxColumn,
             this.nMetroLinearDataGridViewTextBoxColumn,
             this.nVolumeTetoDataGridViewTextBoxColumn,
-            this.nVolumePisoDataGridViewTextBoxColumn});
+            this.nVolumePisoDataGridViewTextBoxColumn,
+            this.cdObraDataGridViewTextBoxColumn1});
             this.dgvObraComodo.DataSource = this.fKcobObrascobObraComodoBindingSource;
             this.dgvObraComodo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvObraComodo.Location = new System.Drawing.Point(0, 25);
@@ -329,10 +329,15 @@
             this.dgvObraComodo.Size = new System.Drawing.Size(631, 165);
             this.dgvObraComodo.TabIndex = 23;
             // 
-            // cobObraComodoBindingSource
+            // cobComodosBindingSource
             // 
-            this.cobObraComodoBindingSource.DataMember = "cobObraComodo";
-            this.cobObraComodoBindingSource.DataSource = this.cobDataBase_dbDataSet;
+            this.cobComodosBindingSource.DataMember = "cobComodos";
+            this.cobComodosBindingSource.DataSource = this.cobDataBase_dbDataSet;
+            // 
+            // fKcobObrascobObraComodoBindingSource
+            // 
+            this.fKcobObrascobObraComodoBindingSource.DataMember = "FK_cobObras_cobObraComodo";
+            this.fKcobObrascobObraComodoBindingSource.DataSource = this.cobObrasBindingSource;
             // 
             // bnObraComodo
             // 
@@ -448,10 +453,10 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // cobComodosBindingSource
+            // cobObraComodoBindingSource
             // 
-            this.cobComodosBindingSource.DataMember = "cobComodos";
-            this.cobComodosBindingSource.DataSource = this.cobDataBase_dbDataSet;
+            this.cobObraComodoBindingSource.DataMember = "cobObraComodo";
+            this.cobObraComodoBindingSource.DataSource = this.cobDataBase_dbDataSet;
             // 
             // cobComodosTableAdapter
             // 
@@ -460,18 +465,6 @@
             // cobObraComodoTableAdapter
             // 
             this.cobObraComodoTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKcobObrascobObraComodoBindingSource
-            // 
-            this.fKcobObrascobObraComodoBindingSource.DataMember = "FK_cobObras_cobObraComodo";
-            this.fKcobObrascobObraComodoBindingSource.DataSource = this.cobObrasBindingSource;
-            // 
-            // cdObraDataGridViewTextBoxColumn1
-            // 
-            this.cdObraDataGridViewTextBoxColumn1.DataPropertyName = "cdObra";
-            this.cdObraDataGridViewTextBoxColumn1.HeaderText = "cdObra";
-            this.cdObraDataGridViewTextBoxColumn1.Name = "cdObraDataGridViewTextBoxColumn1";
-            this.cdObraDataGridViewTextBoxColumn1.Visible = false;
             // 
             // cdComodoDataGridViewTextBoxColumn
             // 
@@ -514,6 +507,13 @@
             this.nVolumePisoDataGridViewTextBoxColumn.Name = "nVolumePisoDataGridViewTextBoxColumn";
             this.nVolumePisoDataGridViewTextBoxColumn.Width = 90;
             // 
+            // cdObraDataGridViewTextBoxColumn1
+            // 
+            this.cdObraDataGridViewTextBoxColumn1.DataPropertyName = "cdObra";
+            this.cdObraDataGridViewTextBoxColumn1.HeaderText = "cdObra";
+            this.cdObraDataGridViewTextBoxColumn1.Name = "cdObraDataGridViewTextBoxColumn1";
+            this.cdObraDataGridViewTextBoxColumn1.Visible = false;
+            // 
             // frmCadObras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,12 +534,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvObraComodo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cobObraComodoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cobComodosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKcobObrascobObraComodoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnObraComodo)).EndInit();
             this.bnObraComodo.ResumeLayout(false);
             this.bnObraComodo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cobComodosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKcobObrascobObraComodoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cobObraComodoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,11 +584,11 @@
         private System.Windows.Forms.BindingSource cobObraComodoBindingSource;
         private cobDataBase_dbDataSetTableAdapters.cobObraComodoTableAdapter cobObraComodoTableAdapter;
         private System.Windows.Forms.BindingSource fKcobObrascobObraComodoBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cdObraDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn cdComodoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nAreaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nMetroLinearDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nVolumeTetoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nVolumePisoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cdObraDataGridViewTextBoxColumn1;
     }
 }

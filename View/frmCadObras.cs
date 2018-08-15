@@ -17,17 +17,15 @@ namespace cobOpus.View
 
         private void frmCadObras_Load(object sender, EventArgs e)
         {
+            this.cobObrasTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObras);
             this.cobComodosTableAdapter.Fill(this.cobDataBase_dbDataSet.cobComodos);
             this.cobObraComodoTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObraComodo);
-            this.cobObrasTableAdapter.Fill(this.cobDataBase_dbDataSet.cobObras);
             this.bnControle.BindingSource = cobObrasBindingSource;
 
             txtNmObra.DataBindings.Add("Text", cobObrasBindingSource, "nmObra", true);
             txtDeObra.DataBindings.Add("Text", cobObrasBindingSource, "deObra", true);
             txtDeEndereco.DataBindings.Add("Text", cobObrasBindingSource, "deEnderecoObra", true);
             txtNmCliente.DataBindings.Add("Text", cobObrasBindingSource, "nmClienteObra", true);
-
-            dgvObraComodo.Columns["cdObra"].Visible = false;
         }
 
         protected override void tsbSalvar_Click(object sender, EventArgs e)
