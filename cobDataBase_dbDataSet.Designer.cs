@@ -50,9 +50,9 @@ namespace cobOpus {
         
         private cobProdutosDataTable tablecobProdutos;
         
-        private global::System.Data.DataRelation relationFK_cobObras_cobObraComodo;
-        
         private global::System.Data.DataRelation relationFK_cobComodos_cobObraComodo;
+        
+        private global::System.Data.DataRelation relationFK_cobObras_cobObraComodo;
         
         private global::System.Data.DataRelation relationFK_cobParcialObra_cobObras;
         
@@ -490,8 +490,8 @@ namespace cobOpus {
                     this.tablecobProdutos.InitVars();
                 }
             }
-            this.relationFK_cobObras_cobObraComodo = this.Relations["FK_cobObras_cobObraComodo"];
             this.relationFK_cobComodos_cobObraComodo = this.Relations["FK_cobComodos_cobObraComodo"];
+            this.relationFK_cobObras_cobObraComodo = this.Relations["FK_cobObras_cobObraComodo"];
             this.relationFK_cobParcialObra_cobObras = this.Relations["FK_cobParcialObra_cobObras"];
             this.relationcobAtividades_cobProdutosSugeridos = this.Relations["cobAtividades_cobProdutosSugeridos"];
         }
@@ -531,6 +531,13 @@ namespace cobOpus {
             this.tablecobProdutos = new cobProdutosDataTable();
             base.Tables.Add(this.tablecobProdutos);
             global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobComodos_cobObraComodo", new global::System.Data.DataColumn[] {
+                        this.tablecobComodos.cdComodoColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobObraComodo.cdComodoColumn});
+            this.tablecobObraComodo.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_cobObras_cobObraComodo", new global::System.Data.DataColumn[] {
                         this.tablecobObras.cdObraColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobObraComodo.cdObraColumn});
@@ -538,10 +545,12 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobComodos_cobObraComodo", new global::System.Data.DataColumn[] {
-                        this.tablecobComodos.cdComodoColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobObraComodo.cdComodoColumn});
-            this.tablecobObraComodo.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobObraComodo_cobObraComodoAtiv", new global::System.Data.DataColumn[] {
+                        this.tablecobObraComodo.cdObraColumn,
+                        this.tablecobObraComodo.cdComodoColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobObraComodoAtiv.cdComodoColumn,
+                        this.tablecobObraComodoAtiv.cdObraColumn});
+            this.tablecobObraComodoAtiv.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -552,12 +561,10 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobObraComodo_cobObraComodoAtiv", new global::System.Data.DataColumn[] {
-                        this.tablecobObraComodo.cdObraColumn,
-                        this.tablecobObraComodo.cdComodoColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobObraComodoAtiv.cdComodoColumn,
-                        this.tablecobObraComodoAtiv.cdObraColumn});
-            this.tablecobObraComodoAtiv.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobProdutos_cobObraComodoAtivProd", new global::System.Data.DataColumn[] {
+                        this.tablecobProdutos.cdProdutoColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobObraComodoAtivProd.cdProdutoColumn});
+            this.tablecobObraComodoAtivProd.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -572,10 +579,10 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobProdutos_cobObraComodoAtivProd", new global::System.Data.DataColumn[] {
-                        this.tablecobProdutos.cdProdutoColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobObraComodoAtivProd.cdProdutoColumn});
-            this.tablecobObraComodoAtivProd.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodo_cobParcialObra", new global::System.Data.DataColumn[] {
+                        this.tablecobParcialComodo.cdParcialColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobParcialObra.cdParcialColumn});
+            this.tablecobParcialObra.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -586,20 +593,6 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodo_cobParcialObra", new global::System.Data.DataColumn[] {
-                        this.tablecobParcialComodo.cdParcialColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobParcialObra.cdParcialColumn});
-            this.tablecobParcialObra.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobProdutos_cobProdutosSugeridos", new global::System.Data.DataColumn[] {
-                        this.tablecobProdutos.cdProdutoColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobProdutosSugeridos.cdProdutoColumn});
-            this.tablecobProdutosSugeridos.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("cobAtividades_cobProdutosSugeridos", new global::System.Data.DataColumn[] {
                         this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobProdutosSugeridos.cdAtividadeColumn});
@@ -607,10 +600,10 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodoAtiv_cobAtividades", new global::System.Data.DataColumn[] {
-                        this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobParcialComodoAtiv.cdAtividadeColumn});
-            this.tablecobParcialComodoAtiv.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobProdutos_cobProdutosSugeridos", new global::System.Data.DataColumn[] {
+                        this.tablecobProdutos.cdProdutoColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobProdutosSugeridos.cdProdutoColumn});
+            this.tablecobProdutosSugeridos.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -625,18 +618,25 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodoAtiv_cobParcialComodo", new global::System.Data.DataColumn[] {
-                        this.tablecobParcialComodoAtiv.cdComodoColumn,
-                        this.tablecobParcialComodoAtiv.cdParcialColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobParcialComodo.cdComodoColumn,
-                        this.tablecobParcialComodo.cdParcialColumn});
-            this.tablecobParcialComodo.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodoAtiv_cobAtividades", new global::System.Data.DataColumn[] {
+                        this.tablecobAtividades.cdAtividadeColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobParcialComodoAtiv.cdAtividadeColumn});
+            this.tablecobParcialComodoAtiv.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_cobComodos_cobParcialComodo", new global::System.Data.DataColumn[] {
                         this.tablecobComodos.cdComodoColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobParcialComodo.cdComodoColumn});
+            this.tablecobParcialComodo.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_cobParcialComodoAtiv_cobParcialComodo", new global::System.Data.DataColumn[] {
+                        this.tablecobParcialComodoAtiv.cdComodoColumn,
+                        this.tablecobParcialComodoAtiv.cdParcialColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobParcialComodo.cdComodoColumn,
+                        this.tablecobParcialComodo.cdParcialColumn});
             this.tablecobParcialComodo.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -648,14 +648,14 @@ namespace cobOpus {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            this.relationFK_cobObras_cobObraComodo = new global::System.Data.DataRelation("FK_cobObras_cobObraComodo", new global::System.Data.DataColumn[] {
-                        this.tablecobObras.cdObraColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecobObraComodo.cdObraColumn}, false);
-            this.Relations.Add(this.relationFK_cobObras_cobObraComodo);
             this.relationFK_cobComodos_cobObraComodo = new global::System.Data.DataRelation("FK_cobComodos_cobObraComodo", new global::System.Data.DataColumn[] {
                         this.tablecobComodos.cdComodoColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobObraComodo.cdComodoColumn}, false);
             this.Relations.Add(this.relationFK_cobComodos_cobObraComodo);
+            this.relationFK_cobObras_cobObraComodo = new global::System.Data.DataRelation("FK_cobObras_cobObraComodo", new global::System.Data.DataColumn[] {
+                        this.tablecobObras.cdObraColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecobObraComodo.cdObraColumn}, false);
+            this.Relations.Add(this.relationFK_cobObras_cobObraComodo);
             this.relationFK_cobParcialObra_cobObras = new global::System.Data.DataRelation("FK_cobParcialObra_cobObras", new global::System.Data.DataColumn[] {
                         this.tablecobObras.cdObraColumn}, new global::System.Data.DataColumn[] {
                         this.tablecobParcialObra.cdObraColumn}, false);
@@ -5317,23 +5317,23 @@ namespace cobOpus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public cobObrasRow cobObrasRow {
-                get {
-                    return ((cobObrasRow)(this.GetParentRow(this.Table.ParentRelations["FK_cobObras_cobObraComodo"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_cobObras_cobObraComodo"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public cobComodosRow cobComodosRow {
                 get {
                     return ((cobComodosRow)(this.GetParentRow(this.Table.ParentRelations["FK_cobComodos_cobObraComodo"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_cobComodos_cobObraComodo"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public cobObrasRow cobObrasRow {
+                get {
+                    return ((cobObrasRow)(this.GetParentRow(this.Table.ParentRelations["FK_cobObras_cobObraComodo"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_cobObras_cobObraComodo"]);
                 }
             }
             

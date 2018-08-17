@@ -793,7 +793,7 @@
   <xs:element name="cobDataBase_dbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="cobDataBase_dbDataSet" msprop:Generator_UserDSName="cobDataBase_dbDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="cobComodos" msprop:Generator_TableClassName="cobComodosDataTable" msprop:Generator_TableVarName="tablecobComodos" msprop:Generator_RowChangedName="cobComodosRowChanged" msprop:Generator_TablePropName="cobComodos" msprop:Generator_RowDeletingName="cobComodosRowDeleting" msprop:Generator_RowChangingName="cobComodosRowChanging" msprop:Generator_RowEvHandlerName="cobComodosRowChangeEventHandler" msprop:Generator_RowDeletedName="cobComodosRowDeleted" msprop:Generator_RowClassName="cobComodosRow" msprop:Generator_UserTableName="cobComodos" msprop:Generator_RowEvArgName="cobComodosRowChangeEvent">
+        <xs:element name="cobComodos" msprop:Generator_TableClassName="cobComodosDataTable" msprop:Generator_TableVarName="tablecobComodos" msprop:Generator_TablePropName="cobComodos" msprop:Generator_RowDeletingName="cobComodosRowDeleting" msprop:Generator_RowChangingName="cobComodosRowChanging" msprop:Generator_RowEvHandlerName="cobComodosRowChangeEventHandler" msprop:Generator_RowDeletedName="cobComodosRowDeleted" msprop:Generator_UserTableName="cobComodos" msprop:Generator_RowChangedName="cobComodosRowChanged" msprop:Generator_RowEvArgName="cobComodosRowChangeEvent" msprop:Generator_RowClassName="cobComodosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdComodo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncdComodo" msprop:Generator_ColumnPropNameInRow="cdComodo" msprop:Generator_ColumnPropNameInTable="cdComodoColumn" msprop:Generator_UserColumnName="cdComodo" type="xs:int" />
@@ -807,7 +807,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobUnidadeMedida" msprop:Generator_TableClassName="cobUnidadeMedidaDataTable" msprop:Generator_TableVarName="tablecobUnidadeMedida" msprop:Generator_TablePropName="cobUnidadeMedida" msprop:Generator_RowDeletingName="cobUnidadeMedidaRowDeleting" msprop:Generator_RowChangingName="cobUnidadeMedidaRowChanging" msprop:Generator_RowEvHandlerName="cobUnidadeMedidaRowChangeEventHandler" msprop:Generator_RowDeletedName="cobUnidadeMedidaRowDeleted" msprop:Generator_UserTableName="cobUnidadeMedida" msprop:Generator_RowChangedName="cobUnidadeMedidaRowChanged" msprop:Generator_RowEvArgName="cobUnidadeMedidaRowChangeEvent" msprop:Generator_RowClassName="cobUnidadeMedidaRow">
+        <xs:element name="cobUnidadeMedida" msprop:Generator_TableClassName="cobUnidadeMedidaDataTable" msprop:Generator_TableVarName="tablecobUnidadeMedida" msprop:Generator_RowChangedName="cobUnidadeMedidaRowChanged" msprop:Generator_TablePropName="cobUnidadeMedida" msprop:Generator_RowDeletingName="cobUnidadeMedidaRowDeleting" msprop:Generator_RowChangingName="cobUnidadeMedidaRowChanging" msprop:Generator_RowEvHandlerName="cobUnidadeMedidaRowChangeEventHandler" msprop:Generator_RowDeletedName="cobUnidadeMedidaRowDeleted" msprop:Generator_RowClassName="cobUnidadeMedidaRow" msprop:Generator_UserTableName="cobUnidadeMedida" msprop:Generator_RowEvArgName="cobUnidadeMedidaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdUnidadeMedida" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncdUnidadeMedida" msprop:Generator_ColumnPropNameInRow="cdUnidadeMedida" msprop:Generator_ColumnPropNameInTable="cdUnidadeMedidaColumn" msprop:Generator_UserColumnName="cdUnidadeMedida" type="xs:int" />
@@ -821,7 +821,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobObras" msprop:Generator_TableClassName="cobObrasDataTable" msprop:Generator_TableVarName="tablecobObras" msprop:Generator_TablePropName="cobObras" msprop:Generator_RowDeletingName="cobObrasRowDeleting" msprop:Generator_RowChangingName="cobObrasRowChanging" msprop:Generator_RowEvHandlerName="cobObrasRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObrasRowDeleted" msprop:Generator_UserTableName="cobObras" msprop:Generator_RowChangedName="cobObrasRowChanged" msprop:Generator_RowEvArgName="cobObrasRowChangeEvent" msprop:Generator_RowClassName="cobObrasRow">
+        <xs:element name="cobObras" msprop:Generator_TableClassName="cobObrasDataTable" msprop:Generator_TableVarName="tablecobObras" msprop:Generator_RowChangedName="cobObrasRowChanged" msprop:Generator_TablePropName="cobObras" msprop:Generator_RowDeletingName="cobObrasRowDeleting" msprop:Generator_RowChangingName="cobObrasRowChanging" msprop:Generator_RowEvHandlerName="cobObrasRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObrasRowDeleted" msprop:Generator_RowClassName="cobObrasRow" msprop:Generator_UserTableName="cobObras" msprop:Generator_RowEvArgName="cobObrasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdObra" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncdObra" msprop:Generator_ColumnPropNameInRow="cdObra" msprop:Generator_ColumnPropNameInTable="cdObraColumn" msprop:Generator_UserColumnName="cdObra" type="xs:int" />
@@ -856,7 +856,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobAtividades" msprop:Generator_TableClassName="cobAtividadesDataTable" msprop:Generator_TableVarName="tablecobAtividades" msprop:Generator_TablePropName="cobAtividades" msprop:Generator_RowDeletingName="cobAtividadesRowDeleting" msprop:Generator_RowChangingName="cobAtividadesRowChanging" msprop:Generator_RowEvHandlerName="cobAtividadesRowChangeEventHandler" msprop:Generator_RowDeletedName="cobAtividadesRowDeleted" msprop:Generator_UserTableName="cobAtividades" msprop:Generator_RowChangedName="cobAtividadesRowChanged" msprop:Generator_RowEvArgName="cobAtividadesRowChangeEvent" msprop:Generator_RowClassName="cobAtividadesRow">
+        <xs:element name="cobAtividades" msprop:Generator_TableClassName="cobAtividadesDataTable" msprop:Generator_TableVarName="tablecobAtividades" msprop:Generator_RowChangedName="cobAtividadesRowChanged" msprop:Generator_TablePropName="cobAtividades" msprop:Generator_RowDeletingName="cobAtividadesRowDeleting" msprop:Generator_RowChangingName="cobAtividadesRowChanging" msprop:Generator_RowEvHandlerName="cobAtividadesRowChangeEventHandler" msprop:Generator_RowDeletedName="cobAtividadesRowDeleted" msprop:Generator_RowClassName="cobAtividadesRow" msprop:Generator_UserTableName="cobAtividades" msprop:Generator_RowEvArgName="cobAtividadesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdAtividade" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columncdAtividade" msprop:Generator_ColumnPropNameInRow="cdAtividade" msprop:Generator_ColumnPropNameInTable="cdAtividadeColumn" msprop:Generator_UserColumnName="cdAtividade" type="xs:int" />
@@ -878,7 +878,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobObraComodo" msprop:Generator_TableClassName="cobObraComodoDataTable" msprop:Generator_TableVarName="tablecobObraComodo" msprop:Generator_TablePropName="cobObraComodo" msprop:Generator_RowDeletingName="cobObraComodoRowDeleting" msprop:Generator_RowChangingName="cobObraComodoRowChanging" msprop:Generator_RowEvHandlerName="cobObraComodoRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObraComodoRowDeleted" msprop:Generator_UserTableName="cobObraComodo" msprop:Generator_RowChangedName="cobObraComodoRowChanged" msprop:Generator_RowEvArgName="cobObraComodoRowChangeEvent" msprop:Generator_RowClassName="cobObraComodoRow">
+        <xs:element name="cobObraComodo" msprop:Generator_TableClassName="cobObraComodoDataTable" msprop:Generator_TableVarName="tablecobObraComodo" msprop:Generator_RowChangedName="cobObraComodoRowChanged" msprop:Generator_TablePropName="cobObraComodo" msprop:Generator_RowDeletingName="cobObraComodoRowDeleting" msprop:Generator_RowChangingName="cobObraComodoRowChanging" msprop:Generator_RowEvHandlerName="cobObraComodoRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObraComodoRowDeleted" msprop:Generator_RowClassName="cobObraComodoRow" msprop:Generator_UserTableName="cobObraComodo" msprop:Generator_RowEvArgName="cobObraComodoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdObra" msprop:Generator_ColumnVarNameInTable="columncdObra" msprop:Generator_ColumnPropNameInRow="cdObra" msprop:Generator_ColumnPropNameInTable="cdObraColumn" msprop:Generator_UserColumnName="cdObra" type="xs:int" />
@@ -890,7 +890,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobObraComodoAtiv" msprop:Generator_TableClassName="cobObraComodoAtivDataTable" msprop:Generator_TableVarName="tablecobObraComodoAtiv" msprop:Generator_TablePropName="cobObraComodoAtiv" msprop:Generator_RowDeletingName="cobObraComodoAtivRowDeleting" msprop:Generator_RowChangingName="cobObraComodoAtivRowChanging" msprop:Generator_RowEvHandlerName="cobObraComodoAtivRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObraComodoAtivRowDeleted" msprop:Generator_UserTableName="cobObraComodoAtiv" msprop:Generator_RowChangedName="cobObraComodoAtivRowChanged" msprop:Generator_RowEvArgName="cobObraComodoAtivRowChangeEvent" msprop:Generator_RowClassName="cobObraComodoAtivRow">
+        <xs:element name="cobObraComodoAtiv" msprop:Generator_TableClassName="cobObraComodoAtivDataTable" msprop:Generator_TableVarName="tablecobObraComodoAtiv" msprop:Generator_RowChangedName="cobObraComodoAtivRowChanged" msprop:Generator_TablePropName="cobObraComodoAtiv" msprop:Generator_RowDeletingName="cobObraComodoAtivRowDeleting" msprop:Generator_RowChangingName="cobObraComodoAtivRowChanging" msprop:Generator_RowEvHandlerName="cobObraComodoAtivRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObraComodoAtivRowDeleted" msprop:Generator_RowClassName="cobObraComodoAtivRow" msprop:Generator_UserTableName="cobObraComodoAtiv" msprop:Generator_RowEvArgName="cobObraComodoAtivRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdObra" msprop:Generator_ColumnVarNameInTable="columncdObra" msprop:Generator_ColumnPropNameInRow="cdObra" msprop:Generator_ColumnPropNameInTable="cdObraColumn" msprop:Generator_UserColumnName="cdObra" type="xs:int" />
@@ -900,7 +900,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobObraComodoAtivProd" msprop:Generator_TableClassName="cobObraComodoAtivProdDataTable" msprop:Generator_TableVarName="tablecobObraComodoAtivProd" msprop:Generator_TablePropName="cobObraComodoAtivProd" msprop:Generator_RowDeletingName="cobObraComodoAtivProdRowDeleting" msprop:Generator_RowChangingName="cobObraComodoAtivProdRowChanging" msprop:Generator_RowEvHandlerName="cobObraComodoAtivProdRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObraComodoAtivProdRowDeleted" msprop:Generator_UserTableName="cobObraComodoAtivProd" msprop:Generator_RowChangedName="cobObraComodoAtivProdRowChanged" msprop:Generator_RowEvArgName="cobObraComodoAtivProdRowChangeEvent" msprop:Generator_RowClassName="cobObraComodoAtivProdRow">
+        <xs:element name="cobObraComodoAtivProd" msprop:Generator_TableClassName="cobObraComodoAtivProdDataTable" msprop:Generator_TableVarName="tablecobObraComodoAtivProd" msprop:Generator_RowChangedName="cobObraComodoAtivProdRowChanged" msprop:Generator_TablePropName="cobObraComodoAtivProd" msprop:Generator_RowDeletingName="cobObraComodoAtivProdRowDeleting" msprop:Generator_RowChangingName="cobObraComodoAtivProdRowChanging" msprop:Generator_RowEvHandlerName="cobObraComodoAtivProdRowChangeEventHandler" msprop:Generator_RowDeletedName="cobObraComodoAtivProdRowDeleted" msprop:Generator_RowClassName="cobObraComodoAtivProdRow" msprop:Generator_UserTableName="cobObraComodoAtivProd" msprop:Generator_RowEvArgName="cobObraComodoAtivProdRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdObra" msprop:Generator_ColumnVarNameInTable="columncdObra" msprop:Generator_ColumnPropNameInRow="cdObra" msprop:Generator_ColumnPropNameInTable="cdObraColumn" msprop:Generator_UserColumnName="cdObra" type="xs:int" />
@@ -912,7 +912,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobParcialObra" msprop:Generator_TableClassName="cobParcialObraDataTable" msprop:Generator_TableVarName="tablecobParcialObra" msprop:Generator_TablePropName="cobParcialObra" msprop:Generator_RowDeletingName="cobParcialObraRowDeleting" msprop:Generator_RowChangingName="cobParcialObraRowChanging" msprop:Generator_RowEvHandlerName="cobParcialObraRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialObraRowDeleted" msprop:Generator_UserTableName="cobParcialObra" msprop:Generator_RowChangedName="cobParcialObraRowChanged" msprop:Generator_RowEvArgName="cobParcialObraRowChangeEvent" msprop:Generator_RowClassName="cobParcialObraRow">
+        <xs:element name="cobParcialObra" msprop:Generator_TableClassName="cobParcialObraDataTable" msprop:Generator_TableVarName="tablecobParcialObra" msprop:Generator_RowChangedName="cobParcialObraRowChanged" msprop:Generator_TablePropName="cobParcialObra" msprop:Generator_RowDeletingName="cobParcialObraRowDeleting" msprop:Generator_RowChangingName="cobParcialObraRowChanging" msprop:Generator_RowEvHandlerName="cobParcialObraRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialObraRowDeleted" msprop:Generator_RowClassName="cobParcialObraRow" msprop:Generator_UserTableName="cobParcialObra" msprop:Generator_RowEvArgName="cobParcialObraRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdParcial" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncdParcial" msprop:Generator_ColumnPropNameInRow="cdParcial" msprop:Generator_ColumnPropNameInTable="cdParcialColumn" msprop:Generator_UserColumnName="cdParcial" type="xs:int" />
@@ -934,7 +934,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobProdutosSugeridos" msprop:Generator_TableClassName="cobProdutosSugeridosDataTable" msprop:Generator_TableVarName="tablecobProdutosSugeridos" msprop:Generator_TablePropName="cobProdutosSugeridos" msprop:Generator_RowDeletingName="cobProdutosSugeridosRowDeleting" msprop:Generator_RowChangingName="cobProdutosSugeridosRowChanging" msprop:Generator_RowEvHandlerName="cobProdutosSugeridosRowChangeEventHandler" msprop:Generator_RowDeletedName="cobProdutosSugeridosRowDeleted" msprop:Generator_UserTableName="cobProdutosSugeridos" msprop:Generator_RowChangedName="cobProdutosSugeridosRowChanged" msprop:Generator_RowEvArgName="cobProdutosSugeridosRowChangeEvent" msprop:Generator_RowClassName="cobProdutosSugeridosRow">
+        <xs:element name="cobProdutosSugeridos" msprop:Generator_TableClassName="cobProdutosSugeridosDataTable" msprop:Generator_TableVarName="tablecobProdutosSugeridos" msprop:Generator_RowChangedName="cobProdutosSugeridosRowChanged" msprop:Generator_TablePropName="cobProdutosSugeridos" msprop:Generator_RowDeletingName="cobProdutosSugeridosRowDeleting" msprop:Generator_RowChangingName="cobProdutosSugeridosRowChanging" msprop:Generator_RowEvHandlerName="cobProdutosSugeridosRowChangeEventHandler" msprop:Generator_RowDeletedName="cobProdutosSugeridosRowDeleted" msprop:Generator_RowClassName="cobProdutosSugeridosRow" msprop:Generator_UserTableName="cobProdutosSugeridos" msprop:Generator_RowEvArgName="cobProdutosSugeridosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdProduto" msprop:Generator_ColumnVarNameInTable="columncdProduto" msprop:Generator_ColumnPropNameInRow="cdProduto" msprop:Generator_ColumnPropNameInTable="cdProdutoColumn" msprop:Generator_UserColumnName="cdProduto" type="xs:int" />
@@ -942,7 +942,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobParcialComodoAtiv" msprop:Generator_TableClassName="cobParcialComodoAtivDataTable" msprop:Generator_TableVarName="tablecobParcialComodoAtiv" msprop:Generator_TablePropName="cobParcialComodoAtiv" msprop:Generator_RowDeletingName="cobParcialComodoAtivRowDeleting" msprop:Generator_RowChangingName="cobParcialComodoAtivRowChanging" msprop:Generator_RowEvHandlerName="cobParcialComodoAtivRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialComodoAtivRowDeleted" msprop:Generator_UserTableName="cobParcialComodoAtiv" msprop:Generator_RowChangedName="cobParcialComodoAtivRowChanged" msprop:Generator_RowEvArgName="cobParcialComodoAtivRowChangeEvent" msprop:Generator_RowClassName="cobParcialComodoAtivRow">
+        <xs:element name="cobParcialComodoAtiv" msprop:Generator_TableClassName="cobParcialComodoAtivDataTable" msprop:Generator_TableVarName="tablecobParcialComodoAtiv" msprop:Generator_RowChangedName="cobParcialComodoAtivRowChanged" msprop:Generator_TablePropName="cobParcialComodoAtiv" msprop:Generator_RowDeletingName="cobParcialComodoAtivRowDeleting" msprop:Generator_RowChangingName="cobParcialComodoAtivRowChanging" msprop:Generator_RowEvHandlerName="cobParcialComodoAtivRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialComodoAtivRowDeleted" msprop:Generator_RowClassName="cobParcialComodoAtivRow" msprop:Generator_UserTableName="cobParcialComodoAtiv" msprop:Generator_RowEvArgName="cobParcialComodoAtivRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdParcial" msprop:Generator_ColumnVarNameInTable="columncdParcial" msprop:Generator_ColumnPropNameInRow="cdParcial" msprop:Generator_ColumnPropNameInTable="cdParcialColumn" msprop:Generator_UserColumnName="cdParcial" type="xs:int" />
@@ -952,7 +952,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobParcialComodo" msprop:Generator_TableClassName="cobParcialComodoDataTable" msprop:Generator_TableVarName="tablecobParcialComodo" msprop:Generator_TablePropName="cobParcialComodo" msprop:Generator_RowDeletingName="cobParcialComodoRowDeleting" msprop:Generator_RowChangingName="cobParcialComodoRowChanging" msprop:Generator_RowEvHandlerName="cobParcialComodoRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialComodoRowDeleted" msprop:Generator_UserTableName="cobParcialComodo" msprop:Generator_RowChangedName="cobParcialComodoRowChanged" msprop:Generator_RowEvArgName="cobParcialComodoRowChangeEvent" msprop:Generator_RowClassName="cobParcialComodoRow">
+        <xs:element name="cobParcialComodo" msprop:Generator_TableClassName="cobParcialComodoDataTable" msprop:Generator_TableVarName="tablecobParcialComodo" msprop:Generator_RowChangedName="cobParcialComodoRowChanged" msprop:Generator_TablePropName="cobParcialComodo" msprop:Generator_RowDeletingName="cobParcialComodoRowDeleting" msprop:Generator_RowChangingName="cobParcialComodoRowChanging" msprop:Generator_RowEvHandlerName="cobParcialComodoRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialComodoRowDeleted" msprop:Generator_RowClassName="cobParcialComodoRow" msprop:Generator_UserTableName="cobParcialComodo" msprop:Generator_RowEvArgName="cobParcialComodoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdParcial" msprop:Generator_ColumnVarNameInTable="columncdParcial" msprop:Generator_ColumnPropNameInRow="cdParcial" msprop:Generator_ColumnPropNameInTable="cdParcialColumn" msprop:Generator_UserColumnName="cdParcial" type="xs:int" />
@@ -964,7 +964,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobParcialComodoAtivProd" msprop:Generator_TableClassName="cobParcialComodoAtivProdDataTable" msprop:Generator_TableVarName="tablecobParcialComodoAtivProd" msprop:Generator_TablePropName="cobParcialComodoAtivProd" msprop:Generator_RowDeletingName="cobParcialComodoAtivProdRowDeleting" msprop:Generator_RowChangingName="cobParcialComodoAtivProdRowChanging" msprop:Generator_RowEvHandlerName="cobParcialComodoAtivProdRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialComodoAtivProdRowDeleted" msprop:Generator_UserTableName="cobParcialComodoAtivProd" msprop:Generator_RowChangedName="cobParcialComodoAtivProdRowChanged" msprop:Generator_RowEvArgName="cobParcialComodoAtivProdRowChangeEvent" msprop:Generator_RowClassName="cobParcialComodoAtivProdRow">
+        <xs:element name="cobParcialComodoAtivProd" msprop:Generator_TableClassName="cobParcialComodoAtivProdDataTable" msprop:Generator_TableVarName="tablecobParcialComodoAtivProd" msprop:Generator_RowChangedName="cobParcialComodoAtivProdRowChanged" msprop:Generator_TablePropName="cobParcialComodoAtivProd" msprop:Generator_RowDeletingName="cobParcialComodoAtivProdRowDeleting" msprop:Generator_RowChangingName="cobParcialComodoAtivProdRowChanging" msprop:Generator_RowEvHandlerName="cobParcialComodoAtivProdRowChangeEventHandler" msprop:Generator_RowDeletedName="cobParcialComodoAtivProdRowDeleted" msprop:Generator_RowClassName="cobParcialComodoAtivProdRow" msprop:Generator_UserTableName="cobParcialComodoAtivProd" msprop:Generator_RowEvArgName="cobParcialComodoAtivProdRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdParcial" msprop:Generator_ColumnVarNameInTable="columncdParcial" msprop:Generator_ColumnPropNameInRow="cdParcial" msprop:Generator_ColumnPropNameInTable="cdParcialColumn" msprop:Generator_UserColumnName="cdParcial" type="xs:int" />
@@ -976,7 +976,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cobProdutos" msprop:Generator_TableClassName="cobProdutosDataTable" msprop:Generator_TableVarName="tablecobProdutos" msprop:Generator_RowChangedName="cobProdutosRowChanged" msprop:Generator_TablePropName="cobProdutos" msprop:Generator_RowDeletingName="cobProdutosRowDeleting" msprop:Generator_RowChangingName="cobProdutosRowChanging" msprop:Generator_RowEvHandlerName="cobProdutosRowChangeEventHandler" msprop:Generator_RowDeletedName="cobProdutosRowDeleted" msprop:Generator_RowClassName="cobProdutosRow" msprop:Generator_UserTableName="cobProdutos" msprop:Generator_RowEvArgName="cobProdutosRowChangeEvent">
+        <xs:element name="cobProdutos" msprop:Generator_TableClassName="cobProdutosDataTable" msprop:Generator_TableVarName="tablecobProdutos" msprop:Generator_TablePropName="cobProdutos" msprop:Generator_RowDeletingName="cobProdutosRowDeleting" msprop:Generator_RowChangingName="cobProdutosRowChanging" msprop:Generator_RowEvHandlerName="cobProdutosRowChangeEventHandler" msprop:Generator_RowDeletedName="cobProdutosRowDeleted" msprop:Generator_UserTableName="cobProdutos" msprop:Generator_RowChangedName="cobProdutosRowChanged" msprop:Generator_RowEvArgName="cobProdutosRowChangeEvent" msprop:Generator_RowClassName="cobProdutosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cdProduto" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncdProduto" msprop:Generator_ColumnPropNameInRow="cdProduto" msprop:Generator_ColumnPropNameInTable="cdProdutoColumn" msprop:Generator_UserColumnName="cdProduto" type="xs:int" />
@@ -1105,18 +1105,14 @@
       <xs:selector xpath=".//mstns:cobParcialComodoAtivProd" />
       <xs:field xpath="mstns:cdProduto" />
     </xs:keyref>
-    <xs:keyref name="FK_cobParcialComodoAtiv_cobParcialComodo" refer="cobParcialComodoAtiv_Constraint2" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:cobParcialComodo" />
-      <xs:field xpath="mstns:cdComodo" />
-      <xs:field xpath="mstns:cdParcial" />
-    </xs:keyref>
     <xs:keyref name="FK_cobComodos_cobParcialComodo" refer="Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobParcialComodo" />
       <xs:field xpath="mstns:cdComodo" />
     </xs:keyref>
-    <xs:keyref name="FK_cobParcialComodoAtiv_cobAtividades" refer="cobAtividades_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:cobParcialComodoAtiv" />
-      <xs:field xpath="mstns:cdAtividade" />
+    <xs:keyref name="FK_cobParcialComodoAtiv_cobParcialComodo" refer="cobParcialComodoAtiv_Constraint2" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:cobParcialComodo" />
+      <xs:field xpath="mstns:cdComodo" />
+      <xs:field xpath="mstns:cdParcial" />
     </xs:keyref>
     <xs:keyref name="FK_cobParcialComodoAtivProd_cobParcialComodoAtiv" refer="cobParcialComodoAtivProd_Constraint2" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobParcialComodoAtiv" />
@@ -1124,21 +1120,29 @@
       <xs:field xpath="mstns:cdComodo" />
       <xs:field xpath="mstns:cdParcial" />
     </xs:keyref>
+    <xs:keyref name="FK_cobParcialComodoAtiv_cobAtividades" refer="cobAtividades_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:cobParcialComodoAtiv" />
+      <xs:field xpath="mstns:cdAtividade" />
+    </xs:keyref>
+    <xs:keyref name="cobAtividades_cobProdutosSugeridos" refer="cobAtividades_Constraint1" msprop:rel_Generator_UserChildTable="cobProdutosSugeridos" msprop:rel_Generator_ChildPropName="GetcobProdutosSugeridosRows" msprop:rel_Generator_UserRelationName="cobAtividades_cobProdutosSugeridos" msprop:rel_Generator_ParentPropName="cobAtividadesRow" msprop:rel_Generator_RelationVarName="relationcobAtividades_cobProdutosSugeridos" msprop:rel_Generator_UserParentTable="cobAtividades">
+      <xs:selector xpath=".//mstns:cobProdutosSugeridos" />
+      <xs:field xpath="mstns:cdAtividade" />
+    </xs:keyref>
     <xs:keyref name="FK_cobProdutos_cobProdutosSugeridos" refer="cobProdutos_Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobProdutosSugeridos" />
       <xs:field xpath="mstns:cdProduto" />
     </xs:keyref>
-    <xs:keyref name="cobAtividades_cobProdutosSugeridos" refer="cobAtividades_Constraint1" msprop:rel_Generator_UserChildTable="cobProdutosSugeridos" msprop:rel_Generator_ChildPropName="GetcobProdutosSugeridosRows" msprop:rel_Generator_UserRelationName="cobAtividades_cobProdutosSugeridos" msprop:rel_Generator_RelationVarName="relationcobAtividades_cobProdutosSugeridos" msprop:rel_Generator_UserParentTable="cobAtividades" msprop:rel_Generator_ParentPropName="cobAtividadesRow">
-      <xs:selector xpath=".//mstns:cobProdutosSugeridos" />
-      <xs:field xpath="mstns:cdAtividade" />
-    </xs:keyref>
-    <xs:keyref name="FK_cobParcialObra_cobObras" refer="cobObras_Constraint1" msprop:rel_Generator_UserChildTable="cobParcialObra" msprop:rel_Generator_ChildPropName="GetcobParcialObraRows" msprop:rel_Generator_UserRelationName="FK_cobParcialObra_cobObras" msprop:rel_Generator_ParentPropName="cobObrasRow" msprop:rel_Generator_RelationVarName="relationFK_cobParcialObra_cobObras" msprop:rel_Generator_UserParentTable="cobObras">
-      <xs:selector xpath=".//mstns:cobParcialObra" />
-      <xs:field xpath="mstns:cdObra" />
-    </xs:keyref>
     <xs:keyref name="FK_cobParcialComodo_cobParcialObra" refer="cobParcialComodo_Constraint2" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobParcialObra" />
       <xs:field xpath="mstns:cdParcial" />
+    </xs:keyref>
+    <xs:keyref name="FK_cobParcialObra_cobObras" refer="cobObras_Constraint1" msprop:rel_Generator_UserChildTable="cobParcialObra" msprop:rel_Generator_ChildPropName="GetcobParcialObraRows" msprop:rel_Generator_UserRelationName="FK_cobParcialObra_cobObras" msprop:rel_Generator_RelationVarName="relationFK_cobParcialObra_cobObras" msprop:rel_Generator_UserParentTable="cobObras" msprop:rel_Generator_ParentPropName="cobObrasRow">
+      <xs:selector xpath=".//mstns:cobParcialObra" />
+      <xs:field xpath="mstns:cdObra" />
+    </xs:keyref>
+    <xs:keyref name="FK_cobProdutos_cobObraComodoAtivProd" refer="cobProdutos_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:cobObraComodoAtivProd" />
+      <xs:field xpath="mstns:cdProduto" />
     </xs:keyref>
     <xs:keyref name="FK_cobObraComodoAtiv_cobObraComodoAtivProd" refer="cobObraComodoAtiv_Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobObraComodoAtivProd" />
@@ -1146,26 +1150,22 @@
       <xs:field xpath="mstns:cdComodo" />
       <xs:field xpath="mstns:cdObra" />
     </xs:keyref>
-    <xs:keyref name="FK_cobProdutos_cobObraComodoAtivProd" refer="cobProdutos_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:cobObraComodoAtivProd" />
-      <xs:field xpath="mstns:cdProduto" />
-    </xs:keyref>
-    <xs:keyref name="FK_cobObraComodoAtiv_cobAtividades" refer="cobAtividades_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:cobObraComodoAtiv" />
-      <xs:field xpath="mstns:cdAtividade" />
-    </xs:keyref>
     <xs:keyref name="FK_cobObraComodo_cobObraComodoAtiv" refer="cobObraComodo_Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:cobObraComodoAtiv" />
       <xs:field xpath="mstns:cdComodo" />
       <xs:field xpath="mstns:cdObra" />
     </xs:keyref>
-    <xs:keyref name="FK_cobObras_cobObraComodo" refer="cobObras_Constraint1" msprop:rel_Generator_UserChildTable="cobObraComodo" msprop:rel_Generator_ChildPropName="GetcobObraComodoRows" msprop:rel_Generator_UserRelationName="FK_cobObras_cobObraComodo" msprop:rel_Generator_ParentPropName="cobObrasRow" msprop:rel_Generator_RelationVarName="relationFK_cobObras_cobObraComodo" msprop:rel_Generator_UserParentTable="cobObras">
-      <xs:selector xpath=".//mstns:cobObraComodo" />
-      <xs:field xpath="mstns:cdObra" />
+    <xs:keyref name="FK_cobObraComodoAtiv_cobAtividades" refer="cobAtividades_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:cobObraComodoAtiv" />
+      <xs:field xpath="mstns:cdAtividade" />
     </xs:keyref>
-    <xs:keyref name="FK_cobComodos_cobObraComodo" refer="Constraint1" msprop:rel_Generator_UserChildTable="cobObraComodo" msprop:rel_Generator_ChildPropName="GetcobObraComodoRows" msprop:rel_Generator_UserRelationName="FK_cobComodos_cobObraComodo" msprop:rel_Generator_RelationVarName="relationFK_cobComodos_cobObraComodo" msprop:rel_Generator_UserParentTable="cobComodos" msprop:rel_Generator_ParentPropName="cobComodosRow">
+    <xs:keyref name="FK_cobComodos_cobObraComodo" refer="Constraint1" msprop:rel_Generator_UserChildTable="cobObraComodo" msprop:rel_Generator_ChildPropName="GetcobObraComodoRows" msprop:rel_Generator_UserRelationName="FK_cobComodos_cobObraComodo" msprop:rel_Generator_ParentPropName="cobComodosRow" msprop:rel_Generator_RelationVarName="relationFK_cobComodos_cobObraComodo" msprop:rel_Generator_UserParentTable="cobComodos">
       <xs:selector xpath=".//mstns:cobObraComodo" />
       <xs:field xpath="mstns:cdComodo" />
+    </xs:keyref>
+    <xs:keyref name="FK_cobObras_cobObraComodo" refer="cobObras_Constraint1" msprop:rel_Generator_UserChildTable="cobObraComodo" msprop:rel_Generator_ChildPropName="GetcobObraComodoRows" msprop:rel_Generator_UserRelationName="FK_cobObras_cobObraComodo" msprop:rel_Generator_RelationVarName="relationFK_cobObras_cobObraComodo" msprop:rel_Generator_UserParentTable="cobObras" msprop:rel_Generator_ParentPropName="cobObrasRow">
+      <xs:selector xpath=".//mstns:cobObraComodo" />
+      <xs:field xpath="mstns:cdObra" />
     </xs:keyref>
   </xs:element>
 </xs:schema>

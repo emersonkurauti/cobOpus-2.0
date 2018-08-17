@@ -60,8 +60,8 @@ namespace cobOpus.View
             {
                 DataGridViewRow currentRow = this.dgvDados.Rows[e.RowIndex];
                 nCdObra = Convert.ToInt32(currentRow.Cells[0].Value);
-
-                ToolStripMenuItem tsmControle = new ToolStripMenuItem("Controle Obra", null, null, "cobOpus.View.frmControleObra");
+                
+                ToolStripMenuItem tsmControle = new ToolStripMenuItem("Painel Obras", null, null, "cobOpus.View.frmPainelObras");
                 ((frmMenu)this.Parent.Parent).ItemMenu_onClick(tsmControle, null);
             }
         }

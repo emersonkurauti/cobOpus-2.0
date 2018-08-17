@@ -55,6 +55,7 @@ namespace cobOpus
             AddListTela("cobOpus.View.frmCadUnidadeMedida");
             AddListTela("cobOpus.View.frmCadObras");
             AddListTela("cobOpus.View.frmControleObra");
+            AddListTela("cobOpus.View.frmPainelObras");
 
             ToolStripMenuItem menuCadastros = RetornarItemMenuCriado(menuStrip, "&Cadastros", null, null, "btnCadastros");
             CriarSubItemMenu(menuCadastros, "&Atividades...", null, ItemMenu_onClick, "cobOpus.View.frmCadAtividades");
@@ -62,6 +63,9 @@ namespace cobOpus
             CriarSubItemMenu(menuCadastros, "&Obras...", null, ItemMenu_onClick, "cobOpus.View.frmCadObras");
             CriarSubItemMenu(menuCadastros, "&Produtos...", null, ItemMenu_onClick, "cobOpus.View.frmCadProdutos");
             CriarSubItemMenu(menuCadastros, "&Unidades de medida...", null, ItemMenu_onClick, "cobOpus.View.frmCadUnidadeMedida");
+
+            ToolStripMenuItem menuControle = RetornarItemMenuCriado(menuStrip, "&Controle", null, null, "btnControle");
+            CriarSubItemMenu(menuControle, "&Painel de obras...", null, ItemMenu_onClick, "cobOpus.View.frmPainelObras");
 
             AddItemMenu(menuStrip, "&Sair", null, btnSair_onClick, "btnSair");
         }
@@ -74,6 +78,12 @@ namespace cobOpus
         public override void ItemMenu_onClick(object sender, EventArgs e)
         {
             Type tipo = Type.GetType(((ToolStripMenuItem)sender).Name);
+
+            Form[] formMDI = MdiChildren;
+
+            foreach (Form frm in formMDI)
+                if (frm.Name.Equals(tipo.Name))
+                    frm.Activate();
 
             if (!VerificaTelaAberta(((ToolStripMenuItem)sender).Name))
             {
